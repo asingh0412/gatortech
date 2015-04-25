@@ -8,8 +8,9 @@
     </head>
     <body>
         
-        <!-- start wrapper -->
-        <div class="wrapper">
+        <!-- Center the page in the middle and contain the layout
+        to a specific width -->
+        <div class="wrapper"> <!-- start wrapper -->
             <div class="page-data">
                 Page content is in here
             </div>
