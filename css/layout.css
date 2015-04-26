@@ -1,9 +1,7 @@
-* 
-{
-  margin: 0px;
-  padding: 0px;
-  font-family: arial;
-
+/* Universal reset */
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -15,36 +13,30 @@ a img {
 }
 
 .comment-wrapper {
-  margin: 10px;
   border: 1px solid #e1e1e1;
   color: #444;
 }
 
 h3.comment-title {
-  line-height: 37px;
-  font-size: 14px;
-  margin: 0 5px 0 5px;
+  line-height: 2.5em;
+  font-size: 1.2em;
   color: #555;
   border-bottom: 1px solid #e1e1e1;
 }
 
 .comments-list {
-  font-size: 13px;
-  margin: 10px 5px 5px 5px;
+  font-size: 1em;
   color: #555;
 }
 
 .ul-comments-holder {
   list-style-type: none;
-  margin: 0px;
-  padding: 0px;
   overflow: hidden;
 }
 
 ul.comments-holder-ul li.comment-holder
 {
   list-style-type: none;
-  margin: 5px 0px 5px 0px;
   border: 1px solid #e1e1e1;
   overflow: hidden;
 }
@@ -53,16 +45,15 @@ ul.comments-holder-ul li.comment-holder:hover
 {
 }
 
+
 ul.comments-holder-ul li.comment-holder .user-img {
   float: left;
   height: 60px;
   width: 60px;
-  margin: 0 10px 0 0;
 }
 
 ul.comments-holder-ul li.comment-holder .user-img img.user-img-pic {
   width: 55px;
-  margin: 5px;
 }
 
 ul.comments-holder-ul li.comment-holder .comment-body {
@@ -70,17 +61,13 @@ ul.comments-holder-ul li.comment-holder .comment-body {
 
 ul.comments-holder-ul li.comment-holder h3.username-field {
   height: 35px;
-  line-height: 30px;
+  line-height: 2.5em;
   color: blue;
-  font-size: 14px;
-  margin: 0 0 0 10px;
+  font-size: 1.2em;
 }
 
 ul.comments-holder-ul li.comment-holder .comment-text {
   display: block;
-  font-size: 13px;
-  margin: 0 10px 0 75px;
+  font-size: 1em;
   word-wrap: normal;
-
-
 }
