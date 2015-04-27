@@ -5,7 +5,7 @@
     // If user session is in progress, redirect to utility.php
     if(isset($_SESSION['login_session']))
     {
-        header("location: feed.php");
+        header("location: profile.php");
     }
     
     // Validation errors
