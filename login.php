@@ -1,7 +1,7 @@
 <?php
   if(isset($_SESSION['login_session']))
   {
-    header("location: feed.php");
+    header("location: profile.php");
   }
   include('includes/signin.php');
 ?>

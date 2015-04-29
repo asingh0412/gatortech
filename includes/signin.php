@@ -35,13 +35,13 @@
             {
                 $_SESSION['login_session'] = $login_email;
                 $dbh = null;
-                header("location: feed.php");
+                header("location: profile.php");
             }
             else
             {
                 $dbh = null;
                 $login_error = "Email or Password is invalid";
-		$login_email_input_value = $_POST['login_email'];
+				$login_email_input_value = $_POST['login_email'];
             }
         }
         catch (PDOException $e)
