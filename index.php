@@ -1,65 +1,24 @@
-
-
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Responsive design -->
-        <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
+        <!-- Responsive design --> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <meta charset="utf-8">
-        <title>Feed</title>
+        <title>Comment Box</title>
         
         <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" media="all" href="css/layout.css">
-            <link href="css/nav.css" rel="stylesheet">
         <script type="text/javascript" src="js/query.js"></script>
-        <script type="text/javascript" src="js/nav.js"></script>
         <script type="text/javascript"  charset="utf-8" src="js/bootstrap.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <!-- Nav bar jquery will move in future. --> 
-        <script>
-            $(function() {
-                var pull        = $('#pull');
-                    menu        = $('nav ul');
-                    menuHeight  = menu.height();
-             
-                $(pull).on('click', function(e) {
-                    e.preventDefault();
-                    menu.slideToggle();
-                });
-            });
-            
-            $(window).resize(function(){
-                var w = $(window).width();
-                if(w > 320 && menu.is(':hidden')) {
-                    menu.removeAttr('style');
-                }
-            });
-        </script>
     </head>
     <body>
-       <nav class="clearfix">
-        <ul class="clearfix">
-            <li><a href="#">Home</a></li>
-            <li><a href="index.php">Feed</a></li>
-            <li><a href="#">Profile</a></li>
-         <!--   <li><a href="#">Design</a></li>
-            <li><a href="#">Web 2.0</a></li>
-            <li><a href="#">Tools</a></li>  -->
-            <a style="float: right" href='logout.php'>log out</a>
-            
-             <!-- Nav bar Image styled as button --> 
-            <button type="button"  class="btn btn-circle btn-xl">image</button>
-        </ul>
-            <a href="#" id="pull">Menu</a>
-       </nav>
-       
-       
+        
         <!-- Center the page in the middle and contain the layout
         to a specific width -->
-        <div class="container"> <!-- start wrapper -->
-
+        <div class="comment-container"> <!-- start wrapper -->
         <div class="page-data">
-            
+            Page content is in here
         </div>
         <h3 class="comment-title">News Feed</h3>
         

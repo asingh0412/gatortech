@@ -1,13 +1,13 @@
 <?php
     // Start session
     session_start();
-    /*
+    
     // If user session is in progress, redirect to utility.php
     if(isset($_SESSION['login_session']))
     {
-        header("location: index.php");
+        header("location: profile.php");
     }
-    */
+    
     // Validation errors
     $login_error = '';
     $login_email_input_value = '';
@@ -35,13 +35,13 @@
             {
                 $_SESSION['login_session'] = $login_email;
                 $dbh = null;
-                header("location: index.php");
+                header("location: profile.php");
             }
             else
             {
                 $dbh = null;
                 $login_error = "Email or Password is invalid";
-		$login_email_input_value = $_POST['login_email'];
+				$login_email_input_value = $_POST['login_email'];
             }
         }
         catch (PDOException $e)
