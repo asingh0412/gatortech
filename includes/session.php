@@ -1,4 +1,5 @@
 <?php
+// Starts a session
     session_start();
     require "db.php";
     
