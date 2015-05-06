@@ -33,12 +33,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/cloud.png" />
-    <title> GT </title>
+    <title>Profile</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/feed.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,26 +49,25 @@
 </head>
 
 <body>
-    <div class="site-container">
-        <div class="container-fluid" id="page-head">
+    <div id="site-container">
+        <div class="container-fluid" id="nav">
+	    
         </div> <!-- Page Header -->
 
-        <div class="container text-center" id="page-content">
-			<?php
-				echo "
-				<div id='profile-picture'>
-					<img src='img/placeholder.jpeg'>
-				</div>
-				
-				<div id='student-info'>
-					<p>$name<br>$program<br>$status</p>
-				</div>
-				";
-			?>
+        <div class="container-fluid text-center" id="page-content">
+	    <?php
+		echo "
+		<div>$status</div>
+		<div>
+		    <img src='img/placeholder.jpeg' id='profile-picture'>
+		</div>
+		<div>$program</div>
+		<p>$name<br></p>"
+	    ?>
         </div>
-
-        <div class="container-fluid" id="page-foot" align="center">
-        </div> <!-- Page Footer -->
+	<div id="profile-feed">
+	    
+	</div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
