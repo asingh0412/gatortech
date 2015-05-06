@@ -1,4 +1,4 @@
-.site-container {
+#site-container {
     width:100%;
     height: 100vh;
     text-align: center;
@@ -15,7 +15,7 @@
     margin-bottom: 6px;
 }
 
-/*
+
 #login-form {
     max-width: 400px;
     padding-top: 16px;
@@ -23,36 +23,47 @@
     width: 100%;
 }
 
-
 #login-container {
     position: relative;
-    top: 50%; transform:
-    translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-}*/
+    top: 50%;
+    
+    transform:
+        translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+}
 
+.form-group{
+    padding-left: 15px;
+    padding-right: 15px;
+}
 .account-wall
 {
-    margin-top: 70px;
+    position: relative;
+    /*margin-top: 100px;*/
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 350px;
     padding: 40px 0px 20px 0px;
-    background-color: #f7f7f7;
+    background-color: #ECF0F1;
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    border-radius: 15px 50px 30px;
+    border-radius: 10px 10px 10px;
 }
 
 .profile-img
 {
    
-    margin-top: 0;
+    margin-top: -160px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px;
     padding: 0;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto 0px;
-    margin-bottom: 10px;
+    width: 240px;
+    height: auto;
+    margin-bottom: -30px;
     display: block;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -108,6 +119,11 @@
     margin-bottom: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+#signin-btn-text
+{
+    margin-left: -3px;
 }
 .form-signin input[type="password"]
 {
