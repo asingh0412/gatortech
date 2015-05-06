@@ -11,7 +11,7 @@
         $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
         
         // Login account verification
-        $sql = $dbh->prepare("SELECT user_name, user_post, post_date FROM feed ORDER BY post_date DESC");
+        $sql = $dbh->prepare("SELECT user_name, user_post, post_date, user_email FROM feed ORDER BY post_date DESC");
         $sql->execute();
         $result = $sql->fetchAll();
 
@@ -82,9 +82,15 @@
         to a specific width -->
         <div class="container"> <!-- start wrapper -->
 
+         <form method="post" action="feed-post.php">
+            <input type="text" name="message" size="50" maxlength="400">
+            <input type="submit" name="post" value="Post">
+        </form>
+
         <div class="page-data">
 
         </div>
+       
         <h3 class="comment-title">News Feed</h3>
 
         <div class="comments-list">
@@ -99,11 +105,16 @@
                             </div>
 
                             <div class='comment-body'>
-                                <h3 class='username-field'>
-                                ".$row[user_name]."
-                                </h3>
+                                <form>
+                                    <input type='hidden' name='user_email' value=".$row[user_email].">
+                                    <button>".$row[user_name]."</button>
+                                </form>
                                 <div class='comment-text'>
-                                    ".$row[user_post]."
+                                    ".$row[user_post]." 
+                                </div>
+                                <div class='comment-date'>
+                                    ".substr($row[post_date], 10, 6)." 
+                                    ".substr($row[post_date], 0, 11)."
                                 </div>
                             </div>
                         </li>";
