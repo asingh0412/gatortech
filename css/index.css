@@ -19,11 +19,6 @@
 
 @media (min-width: 980px)
 {   
-    #page-content {
-    padding-left: 128px;
-    padding-right: 128px;
-    }
-    
     .post-body {
         min-width: 576px;
     }
@@ -37,6 +32,10 @@
     background-color: #1ABC9C;
     height: 128px;
     max-width: 980px;
+}
+
+#feed-container {
+    display: inline-block;
 }
 
 #profile-picture-sm, .user-img {

@@ -50,15 +50,16 @@
         
         <!-- Center the page in the middle and contain the layout
         to a specific width -->
-            <div id="page-content" class="container-fluid"> <!-- start wrapper -->
+            <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
                 <form id="post-form" method="post" action="feed-post.php">
                     <span><input type="text" name="message" width='50px' maxlength="400"></span>
                     <input type="submit" name="post" value="Post">
                 </form>
                 
+                <div id = 'feed-container'>
                 <!--<h3>News Feed</h3>-->
                 <?php foreach($result as $row) {
-                    echo "<div class='post-container'>
+                    echo "<div class='post-container text-left'>
                             <div class='user-img-container'>
                                 <img src='img/placeholder.jpeg'
                                 class='user-img'
@@ -82,11 +83,16 @@
                         </div>";
                     }
                 ?>
+                </div>
             </div>
             <div id='page-footer' class='container-fluid'>
                 <hr>
             </div>
         </div>
     </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
