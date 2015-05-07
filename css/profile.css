@@ -4,7 +4,7 @@
 
 #nav {
     background-color: #1ABC9C;
-    height: 96px;
+    height: 128px;
     max-width: 980px;
 }
 
@@ -25,7 +25,8 @@
 
 #profile-bubble {
     float: right;
-    padding-top: 16px;
+    padding-top: 32px;
+    padding-right: 16px;
 }
 
 #profile-picture-sm {
@@ -40,4 +41,9 @@
 #profile-picture-bubble {
     margin-bottom: 40px;
     margin-top: 80px;
+}
+
+#signout-link {
+    margin-right: 16px;
+    color: white;
 }

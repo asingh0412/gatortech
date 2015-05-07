@@ -52,6 +52,7 @@
     <div id="site-container">
         <div class="container-fluid" id="nav">
 	    <div id='profile-bubble'>
+		<a href='signout.php' id="signout-link"> Sign Out </a>
 		<img src='img/Headshot1.jpg' id='profile-picture-sm'>
 	    </div>
         </div> <!-- Page Header -->

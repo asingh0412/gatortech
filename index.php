@@ -43,7 +43,7 @@
         <div id="site-container">
             <div class="container-fluid" id="nav">
                 <div id='profile-bubble'>
-                    <a href='signout.php'> Sign Out </a>
+                    <a href='signout.php' id="signout-link"> Sign Out </a>
                     <img src='img/Headshot1.jpg' id='profile-picture-sm'>
                 </div>
             </div>
@@ -51,7 +51,7 @@
         <!-- Center the page in the middle and contain the layout
         to a specific width -->
             <div id="page-content" class="container-fluid"> <!-- start wrapper -->
-                <form method="post" action="feed-post.php">
+                <form id="post-form" method="post" action="feed-post.php">
                     <input type="text" name="message" size="50" maxlength="400">
                     <input type="submit" name="post" value="Post">
                 </form>

@@ -4,7 +4,7 @@
 
 #nav {
     background-color: #1ABC9C;
-    height: 96px;
+    height: 128px;
     max-width: 980px;
 }
 
@@ -19,7 +19,8 @@
 
 #profile-bubble {
     float: right;
-    padding-top: 16px;
+    padding-top: 32px;
+    padding-right: 16px;
 }
 
 #page-content {
@@ -27,6 +28,15 @@
     max-width: 980px;
     padding-left: 128px;
     padding-right: 128px;
+}
+
+#post-form {
+    margin-top: 16px;
+}
+
+#signout-link {
+    margin-right: 16px;
+    color: white;
 }
 
 .post-container {
