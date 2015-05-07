@@ -52,7 +52,7 @@
         to a specific width -->
             <div id="page-content" class="container-fluid"> <!-- start wrapper -->
                 <form id="post-form" method="post" action="feed-post.php">
-                    <input type="text" name="message" size="50" maxlength="400">
+                    <span><input type="text" name="message" width='50px' maxlength="400"></span>
                     <input type="submit" name="post" value="Post">
                 </form>
                 
@@ -64,7 +64,7 @@
                                 class='user-img'
                                 alt='Placeholder for image'/>
                             </div>
-                            <div class='post-body'>
+                            <div class='container-fluid post-body'>
                                 <form class='user-btn-link'>
                                     <input type='hidden' name='user_email' value=".$row[user_email].">
                                     <button>".$row[user_name]."</button>
@@ -82,6 +82,9 @@
                         </div>";
                     }
                 ?>
+            </div>
+            <div id='page-footer' class='container-fluid'>
+                <hr>
             </div>
         </div>
     </div>

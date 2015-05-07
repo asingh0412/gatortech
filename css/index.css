@@ -1,3 +1,34 @@
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px) {
+    .post-body{
+    }
+  }
+  
+@media (min-width: 600px) and (max-width: 752px) {
+    .post-body {
+        width: 394px;
+    }
+}
+  
+@media (max-width: 980px)  and (min-width: 752px) {
+    .post-body {
+        width: 576px;
+    }
+}
+
+@media (min-width: 980px)
+{   
+    #page-content {
+    padding-left: 128px;
+    padding-right: 128px;
+    }
+    
+    .post-body {
+        min-width: 576px;
+    }
+}
+
 #site-container {
     width: 100%;
 }
@@ -23,11 +54,9 @@
     padding-right: 16px;
 }
 
-#page-content {
+#page-content, #page-footer {
     background-color: #ECF0F1;
     max-width: 980px;
-    padding-left: 128px;
-    padding-right: 128px;
 }
 
 #post-form {
@@ -42,6 +71,8 @@
 .post-container {
     margin-top: 16px;
     display: inline-flex;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
 }
 
 .post-body {
@@ -49,12 +80,14 @@
     background-color: white;
     padding: 16px;
     min-height: 128px;
-    width: 576px;
+    max-width: 576px;
 }
 
 .user-img-container {
     height: 128px;
     width: 128px;
+    min-height: 128px;
+    min-width: 128px;
     margin-right: 16px;
     display: inline-block;
     padding-left: 32px;
