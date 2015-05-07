@@ -38,31 +38,33 @@
         <script type="text/javascript"  charset="utf-8" src="js/bootstrap.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     </head>
+    
     <body>
         <div id="site-container">
-        <div class="container-fluid" id="nav">
-	    <div id='profile-bubble'>
-                <a href='signout.php'> Sign Out </a>
-		<img src='img/Headshot1.jpg' id='profile-picture-sm'>
-	    </div>
-        </div>
+            <div class="container-fluid" id="nav">
+                <div id='profile-bubble'>
+                    <a href='signout.php'> Sign Out </a>
+                    <img src='img/Headshot1.jpg' id='profile-picture-sm'>
+                </div>
+            </div>
         
         <!-- Center the page in the middle and contain the layout
         to a specific width -->
-        <div id="page-content" class="container-fluid"> <!-- start wrapper -->
-            <form method="post" action="feed-post.php">
-                <input type="text" name="message" size="50" maxlength="400">
-                <input type="submit" name="post" value="Post">
-            </form>
-            <div class="page-data">
-            </div>
+            <div id="page-content" class="container-fluid"> <!-- start wrapper -->
+                <form method="post" action="feed-post.php">
+                    <input type="text" name="message" size="50" maxlength="400">
+                    <input type="submit" name="post" value="Post">
+                </form>
+            
+                <div class="page-data">
+                </div>
        
-            <h3 class="comment-title">News Feed</h3>
-
-            <div class="comments-list">
-                <ul class="comments-holder-ul">
-                <?php foreach($result as $row) {
-                    echo "<li class='comment-holder' id='_1'>
+                <h3 class="comment-title">News Feed</h3>
+    
+                <div class="comments-list">
+                    <ul class="comments-holder-ul">
+                    <?php foreach($result as $row) {
+                        echo "<li class='comment-holder' id='_1'>
                             <div class='user-img'>
                                 <img src='img/placeholder.jpeg'
                                 class='user-img-pic img-responsive'
@@ -84,11 +86,11 @@
                             </div>
                         </li>";
                         }
-                ?>
-            </ul>
+                    ?>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-    </div> <!-- end wrapper -->
     </div>
 </body>
 </html>
