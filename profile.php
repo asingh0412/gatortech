@@ -51,18 +51,20 @@
 <body>
     <div id="site-container">
         <div class="container-fluid" id="nav">
-	    
+	    <div id='profile-bubble'>
+		<img src='img/Headshot1.jpg' id='profile-picture-sm'>
+	    </div>
         </div> <!-- Page Header -->
 
-        <div class="container-fluid text-center" id="page-content">
+        <div class="container-fluid text-center" id="profile-content">
 	    <?php
 		echo "
-		<div>$status</div>
-		<div>
-		    <img src='img/placeholder.jpeg' id='profile-picture'>
-		</div>
-		<div>$program</div>
-		<p>$name<br></p>"
+		    <div id='profile-picture-bubble'>
+		        <img src='img/Headshot1.jpg' id='profile-picture'>
+		    </div></p>
+		    <div id='name-buble'>$name</div>
+		    <div id='program-bubble'>$program</div>
+		    <div id='status-bubble'>$status</div>"
 	    ?>
         </div>
 	<div id="profile-feed">
