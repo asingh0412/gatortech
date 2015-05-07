@@ -55,40 +55,33 @@
                     <input type="text" name="message" size="50" maxlength="400">
                     <input type="submit" name="post" value="Post">
                 </form>
-            
-                <div class="page-data">
-                </div>
-       
-                <h3 class="comment-title">News Feed</h3>
-    
-                <div class="comments-list">
-                    <ul class="comments-holder-ul">
-                    <?php foreach($result as $row) {
-                        echo "<li class='comment-holder' id='_1'>
-                            <div class='user-img'>
+                
+                <!--<h3>News Feed</h3>-->
+                <?php foreach($result as $row) {
+                    echo "<div class='post-container'>
+                            <div class='user-img-container'>
                                 <img src='img/placeholder.jpeg'
-                                class='user-img-pic img-responsive'
-                                alt='Placeholder for image' />
+                                class='user-img'
+                                alt='Placeholder for image'/>
                             </div>
-
-                            <div class='comment-body'>
-                                <form>
+                            <div class='post-body'>
+                                <form class='user-btn-link'>
                                     <input type='hidden' name='user_email' value=".$row[user_email].">
                                     <button>".$row[user_name]."</button>
                                 </form>
-                                <div class='comment-text'>
-                                    ".$row[user_post]." 
-                                </div>
-                                <div class='comment-date'>
+                                <div class='post-date'>
                                     ".substr($row[post_date], 10, 6)." 
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
+                                <hr class='hr-basic'>
+                                <div class='post-text'>
+                                    ".$row[user_post]." 
+                                </div>
+                                
                             </div>
-                        </li>";
-                        }
-                    ?>
-                    </ul>
-                </div>
+                        </div>";
+                    }
+                ?>
             </div>
         </div>
     </div>
