@@ -1,10 +1,16 @@
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px) {
+@media (max-width: 320px){
     .post-body{
+        max-width: 140px;
     }
   }
   
+@media (min-width: 414px)
+{
+    .post-body {
+        width: 240px;
+    }
+}
+
 @media (min-width: 600px) and (max-width: 752px) {
     .post-body {
         width: 394px;
