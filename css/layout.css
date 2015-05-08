@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #c7c7c7;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  padding: 0.7%;
+}
+
+
+.comment-container {
+  position: relative;
+  width: 100%;
+}
+
+
+h3.comment-title {
+  line-height: 1em;
+  font-size: 0.9em;
+  color: #555;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.comments-list {
+  color: #555;
+}
+
+.ul-comments-holder {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+ul.comments-holder-ul li.comment-holder
+{
+  list-style-type: none;
+  border: 1px solid #e1e1e1;
+  overflow: hidden;
+}
+
+
+ul.comments-holder-ul li.comment-holder .user-img {
+  float: left;
+  width: 10%;
+}
+
+ul.comments-holder-ul li.comment-holder .user-img img.user-img-pic {
+  padding-right: 10%;
+  padding-top: 10%;
+}
+
+ul.comments-holder-ul li.comment-holder h3.username-field {
+  line-height: 2em;
+  color: blue;
+  font-size: 0.882em;
+}
+
+ul.comments-holder-ul li.comment-holder .comment-text {
+  display: block;
+  font-size: 0.779em;
+  word-wrap: normal;
+  overflow: hidden;
+  padding-bottom: 2%;
+}
