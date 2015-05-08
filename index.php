@@ -68,7 +68,7 @@
                             <div class='container-fluid post-body'>
                                 <form class='user-btn-link'>
                                     <input type='hidden' name='user_email' value=".$row[user_email].">
-                                    <button>".$row[user_name]."</button>
+                                    <button class='btn btn-primary profile-feed-btn'>".$row[user_name]."</button>
                                 </form>
                                 <div class='post-date'>
                                     ".substr($row[post_date], 10, 6)." 
