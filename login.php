@@ -1,4 +1,17 @@
+<?php
 
+    //Turn on error reporting
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+    include('includes/signin.php');
+    
+    
+  if(isset($_SESSION['login_session']))
+  {
+    header("location: index.php");
+  }
+  
+?>
 
 <!DOCTYPE html>
 
