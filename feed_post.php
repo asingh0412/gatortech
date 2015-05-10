@@ -17,7 +17,8 @@
 
        // display all of the rows
 
-        $name = $result['name'];
+        $data = $_POST['serialize'];
+        $data = $data['name'];
 
        $stmt = $dbh->prepare("INSERT INTO feed (user_email, user_name, user_post) VALUES (:user_email, :user_name, :user_post)");
        $stmt->bindParam(':user_name', $name);

@@ -10,12 +10,11 @@
       var postForm = $('#postForm');
 
         // Create a new AJAX form post 
-        $.post(
-          postForm.action,   // Use the action from the HTML form
-          postForm.serialize(), // Use the data from the HTML form
-
-          // When the function is complete, run this function
-          function(data) {
+        $.ajax({
+          url: "feed_post.php",
+          type: "POST",
+          data: $("#postForm").serialize(),
+          success: function(result) {
 
             // Add the new post to the list of posts 
             $('.post-container').prepend(data);
@@ -23,9 +22,10 @@
             // Clear the text field
             $(post).val('');
 
+          }
+
+        });
             //alert("Ajax is working");
-          
-          });
 
       });
 
