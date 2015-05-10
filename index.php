@@ -34,9 +34,9 @@
 
         <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" media="all" href="css/index.css">
-        <script type="text/javascript" src="js/query.js"></script>
-        <script type="text/javascript"  charset="utf-8" src="js/bootstrap.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="js/query.js"></script> -->
+        <!-- <script type="text/javascript"  charset="utf-8" src="js/bootstrap.min.js"></script> -->
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
     </head>
     
     <body>
@@ -44,7 +44,7 @@
             <div class="container-fluid" id="nav">
                 <div id='profile-bubble'>
                     <a href='signout.php' id="signout-link"> Sign Out </a>
-                    <img src='img/Headshot1.jpg' id='profile-picture-sm'>
+                    <img src='img/placeholder.jpeg' id='profile-picture-sm'>
                 </div>
             </div>
         
