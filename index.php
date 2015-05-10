@@ -34,7 +34,7 @@
 
         <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" media="all" href="css/index.css">
-        <!-- <script type="text/javascript" src="js/query.js"></script> -->
+        <!-- <script type="text/javascript" src="js/query.js"></script>
         <!-- <script type="text/javascript"  charset="utf-8" src="js/bootstrap.min.js"></script> -->
         <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
     </head>
@@ -51,9 +51,9 @@
         <!-- Center the page in the middle and contain the layout
         to a specific width -->
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
-                <form id="post-form" method="post" action="feed-post.php">
+                <form id="postForm" method="post" action="feed-post.php">
                     <span><input type="text" name="message" width='50px' maxlength="400"></span>
-                    <input type="submit" name="post" value="Post">
+                    <input type="submit" id="post" name="post" value="Post">
                 </form>
                 
                 <div id = 'feed-container'>
@@ -67,7 +67,7 @@
                             </div>
                             <div class='container-fluid post-body'>
                                 <form class='user-btn-link'>
-                                    <input type='hidden' name='user_email' value=".$row[user_email].">
+                                    <input type='hidden' id='user_email' name='user_email' value=".$row[user_email].">
                                     <button class='btn btn-primary profile-feed-btn'>".$row[user_name]."</button>
                                 </form>
                                 <div class='post-date'>
@@ -75,8 +75,9 @@
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
                                 <hr class='hr-basic'>
-                                <div class='post-text'>
-                                    ".$row[user_post]." 
+                                <div class='post-text'>".$row[user_post]."
+                                <input type='hidden' id='user_post' name='user_post'
+                                    value=".$row[user_post]."> 
                                 </div>
 
                                 <div class='comment-btn-holder'>
@@ -100,5 +101,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/post_insert.js"></script>
 </body>
 </html>
