@@ -117,3 +117,31 @@
     border-radius: 0px;
     border-color: #1ABC9C;
 }
+
+.post-container:hover .comment-btn-holder {
+    display: block;
+}
+
+.comment-btn-holder {
+    display: none;
+}
+
+.comment-btn-holder ul {
+    list-style-type: none;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.comment-btn-holder ul li {
+    float: right;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.comment-btn-holder ul li:hover {
+    color: blue;
+}

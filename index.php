@@ -78,6 +78,12 @@
                                 <div class='post-text'>
                                     ".$row[user_post]." 
                                 </div>
+
+                                <div class='comment-btn-holder'>
+                                    <ul>
+                                        <li class='delete-btn'>X</li>
+                                    </ul>
+                                </div>
                                 
                             </div>
                         </div>";
