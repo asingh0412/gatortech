@@ -68,9 +68,18 @@
     margin-top: 16px;
 }
 
+#post-form-submit-btn {
+    margin-top: 16px;
+    float: right;
+}
+
 #signout-link {
     margin-right: 16px;
     color: white;
+}
+
+.post-field {
+    border: none;
 }
 
 .post-container {
@@ -113,11 +122,26 @@
     margin: 0px;
 }
 
+.hr-white {
+    color: white;
+}
+
+.text-box-post {
+    width: 100%;
+    min-height: 96px;
+    border: none;
+    resize: none;
+}
+
+.post-text {
+    color: darkgray;
+}
+
 .profile-feed-btn {
     background-color: #1ABC9C;
     border-radius: 0px;
     border-color: #1ABC9C;
-    width: 100px;
+    min-width: 100px;
 }
 
 .side-bar-delete {

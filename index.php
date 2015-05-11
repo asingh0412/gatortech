@@ -51,10 +51,25 @@
         <!-- Center the page in the middle and contain the layout
         to a specific width -->
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
-                <form id="post-form" method="post">
-                    <span><input type="text" name="message" width='50px' maxlength="400" required></span>
-                    <input type="submit" id="post" name="post" value="Post">
-                </form>
+                
+                <div class='post-container text-left'>
+                    <div class='user-img-container'>
+                        <img src='img/placeholder.jpeg'
+                        class='user-img'
+                        alt='Placeholder for image'/>
+                    </div>
+                    <div class='container-fluid post-body'>
+                        <form id="post-form" method="post">
+                            <span><textarea type="text" autocomplete="off" placeholder="What's on your mind?"
+                                            class="text-box-post" name="message" maxlength="400"
+                                            required></textarea></span>
+                            <hr class="hr-basic">
+                            <div id="post-form-submit-btn" class="form-group">
+                                <input class="btn btn-primary profile-feed-btn"type="submit" id="post" name="post" value="Post">
+                            </div>
+                        </form> 
+                    </div>
+                </div>
                 
                 <div id = 'feed-container'>
                 <!--<h3>News Feed</h3>-->
@@ -87,9 +102,7 @@
                     }
                 ?>
                 </div>
-            </div>
-            <div id='page-footer' class='container-fluid'>
-                <hr>
+                <hr class="hr-white">
             </div>
         </div>
     </div>
