@@ -79,13 +79,11 @@
                                 <input type='hidden' id='user_post' name='user_post'
                                     value=".$row[user_post]."> 
                                 </div>
-
                                 <div class='comment-btn-holder'>
                                     <ul>
                                         <li class='delete-btn'>X</li>
                                     </ul>
                                 </div>
-                                
                             </div>
                         </div>";
                     }
