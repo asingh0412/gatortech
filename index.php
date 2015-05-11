@@ -11,7 +11,7 @@
         $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
         
         // Login account verification
-        $sql = $dbh->prepare("SELECT user_name, user_post, post_date, user_email FROM feed ORDER BY post_date DESC");
+        $sql = $dbh->prepare("SELECT user_name, user_post, post_date, user_email, ID FROM feed ORDER BY post_date DESC");
         $sql->execute();
         $result = $sql->fetchAll();
 
@@ -90,7 +90,7 @@
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
                                 <div>
-                                    <a href=''><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>
+                                    <a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>
                                 </div>
                                 <hr class='hr-basic'>
                                 <div class='post-text'>".$row[user_post]."
