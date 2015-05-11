@@ -51,7 +51,7 @@
         <!-- Center the page in the middle and contain the layout
         to a specific width -->
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
-                <form id="post-form" method="post" action="feed_post.php">
+                <form id="post-form" method="post">
                     <span><input type="text" name="message" width='50px' maxlength="400"></span>
                     <input type="submit" id="post" name="post" value="Post">
                 </form>

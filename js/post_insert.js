@@ -30,8 +30,8 @@
       });
 
 
-       // Refresh the page every 10 seconds
-       setTimeout(function() { location.reload() }, 10000);
+       // Refresh the page every 10 seconds (commented out becaue this isn't how we want to do this)
+       // setTimeout(function() { location.reload() }, 10000);
   
   });
 
