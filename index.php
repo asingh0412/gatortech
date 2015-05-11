@@ -74,15 +74,13 @@
                                     ".substr($row[post_date], 10, 6)." 
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
+                                <div>
+                                    <a href=''><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>
+                                </div>
                                 <hr class='hr-basic'>
                                 <div class='post-text'>".$row[user_post]."
                                 <input type='hidden' id='user_post' name='user_post'
                                     value=".$row[user_post]."> 
-                                </div>
-                                <div class='comment-btn-holder'>
-                                    <ul>
-                                        <li class='delete-btn'>X</li>
-                                    </ul>
                                 </div>
                             </div>
                         </div>";

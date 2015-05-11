@@ -105,6 +105,7 @@
 }
 
 .post-date {
+    float: right;
     display: inline-block;
 }
 
@@ -116,6 +117,11 @@
     background-color: #1ABC9C;
     border-radius: 0px;
     border-color: #1ABC9C;
+}
+
+.side-bar-delete {
+    color: #1ABC9C;
+    float: right;    
 }
 
 .post-container:hover .comment-btn-holder {
