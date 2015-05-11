@@ -7,7 +7,7 @@
 
     if($_POST['message'])
     {
-    try
+        try
         {
             // New database connection
             $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
