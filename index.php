@@ -52,7 +52,7 @@
         to a specific width -->
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
                 <form id="post-form" method="post">
-                    <span><input type="text" name="message" width='50px' maxlength="400"></span>
+                    <span><input type="text" name="message" width='50px' maxlength="400" required></span>
                     <input type="submit" id="post" name="post" value="Post">
                 </form>
                 
