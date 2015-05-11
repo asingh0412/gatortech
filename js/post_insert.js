@@ -7,13 +7,13 @@
 
       // Fetch a handle to the post field and the form
       var post = $('#message');
-      var postForm = $('#postForm');
+      var postForm = $('#post-form');
 
         // Create a new AJAX form post 
         $.ajax({
           url: "feed_post.php",
           type: "POST",
-          data: $("#postForm").serialize(),
+          data: $("#post-form").serialize(),
           success: function(result) {
 
             // Add the new post to the list of posts 
