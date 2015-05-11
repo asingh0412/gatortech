@@ -44,7 +44,7 @@
             <div class="container-fluid" id="nav">
                 <div id='profile-bubble'>
                     <a href='signout.php' id="signout-link"> Sign Out </a>
-                    <img src='img/placeholder.jpeg' id='profile-picture-sm'>
+                    <a href='profile.php'><img src='img/placeholder.jpeg' id='profile-picture-sm'></a>
                 </div>
             </div>
         
