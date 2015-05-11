@@ -32,9 +32,9 @@
         $fileName = before('@', $_SESSION['login_session']);
 
         $target_dir = "img/profile/";
+        $imageFileType = pathinfo($target_dir . basename($_FILES["image"]["name"]),PATHINFO_EXTENSION);
         $target_file = $target_dir . $fileName . '.' . $imageFileType;
         $uploadOk = 1;
-        $imageFileType = pathinfo($target_dir . basename($_FILES["image"]["name"]),PATHINFO_EXTENSION);
         // Check if image file is a actual image or fake image
             $check = getimagesize($_FILES["image"]["tmp_name"]);
             if($check !== false) {
@@ -67,7 +67,7 @@
     }
     
         try {
-            $stmt = $dbh->prepare("INSERT INTO account (picture) VALUES (:picture)");
+            $stmt = $dbh->prepare("INSERT INTO account (picture) VALUES (:picture) WHERE email = '$_SESSION[login_session]'");
             $stmt->bindParam(':picture', $target_file);
             $stmt->execute();
 
