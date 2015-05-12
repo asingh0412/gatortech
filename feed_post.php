@@ -1,8 +1,6 @@
 <?
-// create a new DB connection 
- include('includes/session.php');
-    
-    // Database connection information
+
+    include('includes/session.php');
     require "includes/db.php";
 
     if($_POST['message'])
@@ -17,19 +15,19 @@
             $sql->execute();
             $result = $sql->fetch();
     
-           // display all of the rows
+            // display all of the rows
     
             $data = $_POST['serialize'];
             $name = $result['name'];
     
-           $stmt = $dbh->prepare("INSERT INTO feed (user_email, user_name, user_post) VALUES (:user_email, :user_name, :user_post)");
-           $stmt->bindParam(':user_name', $name);
-           $stmt->bindParam(':user_email', $_SESSION['login_session']);
-           $stmt->bindParam(':user_post', $_POST['message']);
+            $stmt = $dbh->prepare("INSERT INTO feed (user_email, user_name, user_post) VALUES (:user_email, :user_name, :user_post)");
+            $stmt->bindParam(':user_name', $name);
+            $stmt->bindParam(':user_email', $_SESSION['login_session']);
+            $stmt->bindParam(':user_post', $_POST['message']);
+        
+            $stmt->execute();
     
-           $stmt->execute();
-    
-           header("Location: index.php");
+            header("Location: index.php");
         }
         catch (PDOException $e)
         {

@@ -1,8 +1,5 @@
 <?php
-// create a new DB connection 
- include('includes/session.php');
-    
-    // Database connection information
+    include('includes/session.php');
     require "includes/db.php";
     require "includes/load_feed.php";
 ?>
@@ -73,7 +70,7 @@
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
                                 <div>
-                                    <a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>
+                                    <a href='includes/delete.php?id=$row[id]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>
                                 </div>
                                 <hr class='hr-basic'>
                                 <div class='post-text'>".$row[user_post]."
