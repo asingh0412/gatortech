@@ -18,7 +18,7 @@
     if (isset($_POST['submit'])) {
         // New database connection
         $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
-        
+        $user_check = $_SESSION['login_session'];
         $fileName = before('@', $_SESSION['login_session']);
 
         $target_dir = "img/profile/";
@@ -56,12 +56,12 @@
         }
     }
     
+        echo "$user_check";
+        
         try {
-            $stmt = $dbh->prepare("INSERT INTO account (picture) VALUES (:picture) WHERE email = '$_SESSION[login_session]'");
-            $stmt->bindParam(':picture', $target_file);
+            $stmt = $dbh->prepare("UPDATE account SET picture = :picture WHERE email = '$user_check'");
+            $stmt->bindParam(':picture', $target_file, PDO::PARAM_STR);
             $stmt->execute();
-
-
 
         } catch (PDOException $e) {
             echo $e->getMessage();

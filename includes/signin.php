@@ -1,13 +1,7 @@
 <?php
     // Start session
     session_start();
-    /*
-    // If user session is in progress, redirect to utility.php
-    if(isset($_SESSION['login_session']))
-    {
-        header("location: index.php");
-    }
-    */
+
     // Validation errors
     $login_error = '';
     $login_email_input_value = '';
