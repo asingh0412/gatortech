@@ -1,7 +1,7 @@
 <?php
 
-//print_r($_GET);
-
+print_r($_GET);
+//echo "This is the id being delete". $_GET['id'];
 $id = $_GET['id'];
     // Database connection information
     require "db.php";
