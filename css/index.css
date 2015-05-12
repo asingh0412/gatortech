@@ -83,6 +83,10 @@
     border: none;
 }
 
+textarea:focus, input:focus {
+    outline: 0;
+}
+
 .post-container {
     margin-top: 16px;
     display: inline-flex;
