@@ -52,14 +52,16 @@
         <div class="container-fluid" id="nav">
 	    <div id='profile-bubble'>
 		<a href='signout.php' id="signout-link"> Sign Out </a>
-		<img src='img/Headshot1.jpg' id='profile-picture-sm'>
+		<?php
+		    echo "<img src=$picture id='profile-picture-sm'>";
+		?>
 	    </div>
         </div> <!-- Page Header -->
         <div class="container-fluid text-center" id="profile-content">
 	    <?php
 		echo "
 		    <div id='profile-picture-bubble'>
-		        <img src='img/Headshot1.jpg' id='profile-picture'>
+		        <img src=$picture id='profile-picture'>
 		    </div></p>
 		    <div id='name-buble'>$name</div>
 		    <div id='program-bubble'>$program</div>
