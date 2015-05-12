@@ -13,6 +13,10 @@
             $status = $result['status'];
             $name = $result['name'];
             $picture = $result['picture'];
+
+            $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email ID FROM feed WHERE email = '$_SESSION[login_session]'");
+            $sql2->execute();
+            $result = $sql2->fetchAll();
 	}
 	catch (PDOException $e)
 	{

@@ -1,9 +1,8 @@
 <?php
     include('includes/session.php');
-    
-	// Database connection information
-	require "includes/db.php";
-	require "includes/load_profile.php";
+    // Database connection information
+    require "includes/db.php";
+    require "includes/load_profile.php";
 ?>
 
 <!DOCTYPE html>
@@ -49,8 +48,36 @@
 		    <div id='status-bubble'>$status</div>"
 	    ?>
         </div>
-	<div id="profile-feed">
-	    
+	<div id = 'feed-container'>
+	    <!--<h3>News Feed</h3>-->
+	    <?php foreach($result as $row) {
+		echo "<div class='post-container text-left'>
+			<div class='user-img-container'>
+			    <img src='img/placeholder.jpeg'
+			    class='user-img'
+			    alt='Placeholder for image'/>
+			</div>
+			<div class='container-fluid post-body'>
+			    <form class='user-btn-link'>
+				<input type='hidden' id='user_email' name='user_email' value=".$row[user_email].">
+				<button class='btn btn-primary profile-feed-btn'>".$row[user_name]."</button>
+			    </form>
+			    <div class='post-date'>
+				".substr($row[post_date], 10, 6)." 
+				".substr($row[post_date], 0, 11)."
+			    </div>
+			    <div>
+				<a href='includes/delete.php?id=$row[id]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>
+			    </div>
+			    <hr class='hr-basic'>
+			    <div class='post-text'>".$row[user_post]."
+			    <input type='hidden' id='user_post' name='user_post'
+				value=".$row[user_post]."> 
+			    </div>
+			</div>
+		    </div>";
+		}
+	    ?>
 	</div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
