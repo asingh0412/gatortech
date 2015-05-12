@@ -1,13 +1,3 @@
-<html>
-        <form action="" method="post" enctype="multipart/form-data">
-        <div class="inputContainer">
-        <label>Image File:</label>
-        <input type="file" name="image">
-        <input type="submit" value="Submit" name="submit">
-        </div>
-        </form>
-</html>
-
 <?php
 
     include('includes/session.php');
@@ -79,3 +69,13 @@
         }
     }
 ?>
+
+<html>
+        <form action="" method="post" enctype="multipart/form-data">
+        <div class="inputContainer">
+        <label>Image File:</label>
+        <input type="file" name="image">
+        <input type="submit" value="Submit" name="submit">
+        </div>
+        </form>
+</html>
