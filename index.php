@@ -42,7 +42,7 @@
                         <form id="post-form" method="post">
                             <span><textarea type="text" autocomplete="off" placeholder="What's on your mind?"
                                             class="text-box-post" name="message" maxlength="400"
-                                            required></textarea></span>
+                                            required autofocus></textarea></span>
                             <hr class="hr-basic">
                             <div id="post-form-submit-btn" class="form-group">
                                 <input class="btn btn-primary profile-feed-btn" type="submit" id="post" name="post" value="Post">
