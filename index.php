@@ -73,8 +73,11 @@
                                     ".substr($row[post_date], 10, 6)." 
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
-                                <div>
-                                    <a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>
+                                <div>";
+                                if($_SESSION['login_session'] == $row[user_email]) {
+                                    echo "<a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>"; 
+                                }
+                                echo "
                                 </div>
                                 <hr class='hr-basic'>
                                 <div class='post-text'>".$row[user_post]."
