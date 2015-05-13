@@ -61,7 +61,7 @@
                                 alt='Placeholder for image'/>
                             </div>
                             <div class='container-fluid post-body'>
-                                <form class='user-btn-link'>
+                                <form class='user-btn-link' method='post' action='profile.php'>
                                     <input type='hidden' id='user_email' name='user_email' value=".$row[user_email].">
                                     <button class='btn btn-primary profile-feed-btn'>".$row[user_name]."</button>
                                 </form>

@@ -1,6 +1,5 @@
 <?php
     include('includes/session.php');
-    // Database connection information
     require "includes/db.php";
     require "includes/load_profile.php";
 ?>
