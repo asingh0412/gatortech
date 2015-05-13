@@ -19,7 +19,7 @@
     
             $data = $_POST['serialize'];
             $name = $result['name'];
-            $picture = $result['picure'];
+            $picture = $result['picture'];
     
             $stmt = $dbh->prepare("INSERT INTO feed (user_email, user_name, user_post, picture) VALUES (:user_email, :user_name, :user_post, :picture)");
             $stmt->bindParam(':user_name', $name);
