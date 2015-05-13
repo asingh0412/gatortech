@@ -33,9 +33,9 @@
                 $name = $result['name'];
                 $picture = $result['picture'];
     
-                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email ID FROM feed WHERE email = '$_SESSION[login_session]'");
+                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email, picture, ID FROM feed WHERE user_email = '$_POST[user_email]'");
                 $sql2->execute();
-                $result = $sql2->fetchAll();
+                $result2 = $sql2->fetchAll();
             }
             catch (PDOException $e)
             {
@@ -59,9 +59,10 @@
                 $name = $result['name'];
                 $picture = $result['picture'];
     
-                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email ID FROM feed WHERE email = '$_SESSION[login_session]'");
+                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email, picture, ID FROM feed WHERE user_email = '$_SESSION[login_session]'");
                 $sql2->execute();
-                $result = $sql2->fetchAll();
+                $result2 = $sql2->fetchAll();
+                
             }
             catch (PDOException $e)
             {
