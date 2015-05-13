@@ -32,7 +32,7 @@
 	    <div id='profile-bubble'>
 		<a href='signout.php' id="signout-link"> Sign Out </a>
 		<?php
-		    echo "<img src=$picture id='profile-picture-sm'>";
+		    echo "<img src=$nav_picture id='profile-picture-sm'>";
 		?>
 	    </div>
         </div> <!-- Page Header -->

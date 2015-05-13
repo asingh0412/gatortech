@@ -1,7 +1,24 @@
 <?php
+        try
+        {
+            // New database connection
+            $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
+                
+            // Login account verification
+            $sql = $dbh->prepare("SELECT picture FROM account WHERE email = '$_SESSION[login_session]'");
+            $sql->execute();
+            $result = $sql->fetch();
+            
+            $nav_picture = $result['picture'];
+        }
+        catch (PDOException $e)
+        {
+                echo $e->getMessage();
+        }
+        
         if (isset($_POST[user_email]))
         {
-             try
+            try
             {
                 // New database connection
                 $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);

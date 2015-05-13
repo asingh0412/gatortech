@@ -24,7 +24,9 @@
             <div class="container-fluid" id="nav">
                 <div id='profile-bubble'>
                     <a href='signout.php' id="signout-link"> Sign Out </a>
-                    <a href='profile.php'><img src='img/placeholder.jpeg' id='profile-picture-sm'></a>
+                    <?php
+                        echo "<a href='profile.php'><img src=$nav_picture id='profile-picture-sm'></a>";
+                    ?>
                 </div>
             </div>
         
@@ -34,9 +36,11 @@
                 
                 <div class='post-container text-left'>
                     <div class='user-img-container'>
-                        <img src='img/placeholder.jpeg'
-                        class='user-img'
-                        alt='Placeholder for image'/>
+                        <?php
+                            echo "<img src=$nav_picture
+                            class='user-img'
+                            alt='Placeholder for image'/>";
+                        ?>
                     </div>
                     <div class='container-fluid post-body'>
                         <form id="post-form" method="post">
