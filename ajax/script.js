@@ -1,6 +1,6 @@
 $(function() 
 {
-   $('.post-container').hide().fadeIn(3000);
+   //$('.post-container').hide().fadeIn(3000);
         $('#post').click(function()
         {                
                 $.ajax({
