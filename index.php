@@ -70,7 +70,11 @@
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
                                 <div>
+<<<<<<< Updated upstream
                                     <a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>
+=======
+                                    <a href='includes/delete.php?id='.$row[ID].'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>
+>>>>>>> Stashed changes
                                 </div>
                                 <hr class='hr-basic'>
                                 <div class='post-text'>".$row[user_post]."
