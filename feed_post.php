@@ -24,7 +24,6 @@
             $stmt->bindParam(':user_name', $name);
             $stmt->bindParam(':user_email', $_SESSION['login_session']);
             $stmt->bindParam(':user_post', $_POST['message']);
-        
             $stmt->execute();
     
             header("Location: index.php");

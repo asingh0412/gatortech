@@ -39,13 +39,13 @@
                         alt='Placeholder for image'/>
                     </div>
                     <div class='container-fluid post-body'>
-                        <form id="post-form" method="post">
+                        <form id="post-form" method="post" action=feed_post.php>
                             <span><textarea type="text" autocomplete="off" placeholder="What's on your mind?"
                                             class="text-box-post" name="message" maxlength="400"
                                             required></textarea></span>
                             <hr class="hr-basic">
                             <div id="post-form-submit-btn" class="form-group">
-                                <input class="btn btn-primary profile-feed-btn"type="submit" id="post" name="post" value="Post">
+                                <input class="btn btn-primary profile-feed-btn" type="submit" id="post" name="post" value="Post">
                             </div>
                         </form> 
                     </div>
@@ -71,7 +71,6 @@
                                 </div>
                                 <div>
                                     <a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>
-                                    <a href='includes/delete.php?id='.$row[ID].'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>
                                 </div>
                                 <hr class='hr-basic'>
                                 <div class='post-text'>".$row[user_post]."
