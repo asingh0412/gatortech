@@ -12,12 +12,7 @@ $(function()
                     $('.post-container').prepend(data);
 
                     $('#message').val('');
-   
                 },
-                
-            });
-               
+         });       
     });
-
-
 });
