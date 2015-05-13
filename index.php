@@ -56,7 +56,7 @@
                 <?php foreach($result as $row) {
                     echo "<div class='post-container text-left'>
                             <div class='user-img-container'>
-                                <img src='img/placeholder.jpeg'
+                                <img src="$row[picture]"
                                 class='user-img'
                                 alt='Placeholder for image'/>
                             </div>
