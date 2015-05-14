@@ -69,15 +69,16 @@
                                     <input type='hidden' id='user_email' name='user_email' value=".$row[user_email].">
                                     <button class='btn btn-primary profile-feed-btn'>".$row[user_name]."</button>
                                 </form>
-                                <div class='post-date'>
-                                    ".substr($row[post_date], 10, 6)." 
-                                    ".substr($row[post_date], 0, 11)."
-                                </div>
-                                <div>";
+                                <div class='delete-post-container'>";
+                                
                                 if($_SESSION['login_session'] == $row[user_email]) {
                                     echo "<a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>"; 
                                 }
-                                echo "
+                                
+                                echo "</div><br>
+                                <div class='post-date'>
+                                    ".substr($row[post_date], 10, 6)." 
+                                    ".substr($row[post_date], 0, 11)."
                                 </div>
                                 <hr class='hr-basic'>
                                 <div class='post-text'>".$row[user_post]."
