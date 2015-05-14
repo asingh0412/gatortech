@@ -123,12 +123,16 @@
 }
 
 .post-date {
-    float: right;
     display: inline-block;
+    color: gray;
+    font-size: 12px;
 }
 
 .hr-basic {
-    margin: 0px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .hr-white {
@@ -148,7 +152,11 @@
 
 .side-bar-delete {
     color: #1ABC9C;
-    float: right;    
+}
+
+.delete-post-container {
+    display: inline-block;
+    float: right;
 }
 
 .post-container:hover .comment-btn-holder {
