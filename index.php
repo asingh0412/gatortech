@@ -22,8 +22,9 @@
     <body>
         <div id="site-container">
             <div class="container-fluid" id="nav">
+                <a href='profile.php' id="signout-link"> Profile </a>
+                <a href='signout.php' id="signout-link"> Sign Out </a>
                 <div id='profile-bubble'>
-                    <a href='signout.php' id="signout-link"> Sign Out </a>
                     <?php
                         echo "<a href='profile.php'><img src=$nav_picture id='profile-picture-sm'></a>";
                     ?>
