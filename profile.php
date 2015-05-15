@@ -2,6 +2,7 @@
     include('includes/session.php');
     require "includes/db.php";
     require "includes/load_profile.php";
+    require "includes/upload.php";
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +33,7 @@
 	    <div id='profile-bubble'>
 		<a href='signout.php' id="signout-link"> Sign Out </a>
 		<?php
-		    echo "<img src=$nav_picture id='profile-picture-sm'>";
+		    echo "<a href='profile.php'><img src=$nav_picture id='profile-picture-sm'></a>";
 		?>
 	    </div>
         </div> <!-- Page Header -->
@@ -83,6 +84,28 @@
                 ?>
 	    </div>
         </div>
+	<a href="#" data-toggle='modal' data-target='#upload-modal'> Upload </a>
+	<div class="modal fade" id="upload-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <form class="upload-form" method="post" enctype="multipart/form-data">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		  Image Upload
+		</div> <!-- Modal Header -->
+	        <div class="modal-body">
+		    <label>Image File:</label>
+		    <input type="file" name="image">
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		  <input type="submit" name='submit-upload' class="btn btn-default" value='Upload'>
+		</div> <!-- Modal Footer -->
+	      </form>
+	    </div> <!-- Modal Content -->
+	  </div> <!-- Modal Dialog -->
+	</div> <!-- Modal -->
+	
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

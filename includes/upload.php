@@ -1,21 +1,10 @@
 <?php
-
-    include('includes/session.php');
-    
-    // Database connection information
-    require "includes/db.php";
-    
     function before ($this, $inthat)
     {
         return substr($inthat, 0, strpos($inthat, $this));
     };
 
-/*
- *print "<pre>";
- *print_r($_POST);
- *print "</pre>";
- */
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['submit-upload'])) {
         // New database connection
         $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
         $user_check = $_SESSION['login_session'];
@@ -68,12 +57,3 @@
     }
 ?>
 
-<html>
-        <form action="" method="post" enctype="multipart/form-data">
-        <div class="inputContainer">
-        <label>Image File:</label>
-        <input type="file" name="image">
-        <input type="submit" value="Submit" name="submit">
-        </div>
-        </form>
-</html>
