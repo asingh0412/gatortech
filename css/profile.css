@@ -83,6 +83,7 @@
 #profile-picture-bubble {
     margin-bottom: 40px;
     margin-top: 80px;
+    position: relative;
 }
 
 #signout-link {
@@ -201,6 +202,18 @@
 
 .modal-dialogue {
     margin-top: 200px;
+}
+
+.modal-link {
+    position: absolute;
+    top: 87%;
+    left: 48.6%;
+    color: white;
+    font-size: 24px;
+}
+
+.upload-photo {
+    color: white;
 }
 
 #upload-modal .modal-dialog {

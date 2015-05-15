@@ -41,11 +41,20 @@
 	    <?php
 		echo "
 		    <div id='profile-picture-bubble'>
-		        <img src=$picture id='profile-picture'>
+			<figure>
+			    <img src=$picture id='profile-picture'>";
+			    if ((!isset($_POST[user_email]))||($_POST[user_email]==$_SESSION['login_session']))
+			    {
+				echo 	"<figcaption>
+					    <a href='#' class='modal-link' data-toggle='modal' data-target='#upload-modal'>
+					    <span class='glyphicon glyphicon-camera upload-photo'></span></a>
+					</figcaption>";
+			    }
+			echo "</figure>
 		    </div></p>
 		    <div id='name-buble'>$name</div>
 		    <div id='program-bubble'>$program</div>
-		    <div id='status-bubble'>$status</div>"
+		    <div id='status-bubble'>$status</div>";
 	    ?>
 	
 	    <div id = 'feed-container'>
@@ -84,7 +93,7 @@
                 ?>
 	    </div>
         </div>
-	<a href="#" data-toggle='modal' data-target='#upload-modal'> Upload </a>
+	
 	<div class="modal fade" id="upload-modal" tabindex="-1" role="dialog" aria-hidden="true">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
