@@ -89,17 +89,13 @@
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <form class="upload-form" method="post" enctype="multipart/form-data">
-		<div class="modal-header">
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		  Image Upload
-		</div> <!-- Modal Header -->
 	        <div class="modal-body">
 		    <label>Image File:</label>
 		    <input type="file" name="image">
 		</div>
 		<div class="modal-footer">
-		  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-		  <input type="submit" name='submit-upload' class="btn btn-default" value='Upload'>
+		  <button type="button" class="btn btn-primary btn-upload" data-dismiss="modal">Cancel</button>
+		  <input type="submit" name='submit-upload' class="btn btn-primary btn-upload" value='Upload'>
 		</div> <!-- Modal Footer -->
 	      </form>
 	    </div> <!-- Modal Content -->
