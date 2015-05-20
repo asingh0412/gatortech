@@ -228,3 +228,11 @@
 #upload-modal .modal-content {
     margin-top: 75%
 }
+
+#nav-glyph {
+    font-size: 1.5em;
+    float: right;
+    top: 55px;
+    margin-right: 16px;
+    color: white;
+}

@@ -23,12 +23,13 @@
         <div id="site-container">
             <div class="container-fluid" id="nav">
                 <a href='profile.php' id="signout-link"> Profile </a>
-                <a href='signout.php' id="signout-link"> Sign Out </a>
                 <div id='profile-bubble'>
                     <?php
                         echo "<a href='profile.php'><img src=$nav_picture id='profile-picture-sm'></a>";
                     ?>
                 </div>
+                <a href='signout.php' id='nav-glyph' class='glyphicon glyphicon-log-out'></a>
+	    <a id='nav-glyph' class='glyphicon glyphicon-cog'></a>
             </div>
         
         <!-- Center the page in the middle and contain the layout

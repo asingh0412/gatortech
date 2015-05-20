@@ -40,6 +40,14 @@
     max-width: 980px;
 }
 
+#nav-glyph {
+    font-size: 1.5em;
+    float: right;
+    top: 55px;
+    margin-right: 16px;
+    color: white;
+}
+
 #feed-container {
     display: inline-block;
 }
