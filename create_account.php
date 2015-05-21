@@ -42,6 +42,14 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password
     <title>Create a new account</title>
     <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    
+    <!-- Hide the calendar default view -->
+    <style>
+    .ui-datepicker-calendar {
+    display: none;
+}​
+</style>
+
   </head>
   <body>
     <form action="create_account.php" method="POST" class="form-group">
@@ -69,9 +77,19 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password
   // jQuery Datepicker  
   $(function()
   {
-    $('#datepicker').datepicker();
-  }
-  );
+    /* Set to only show the month and year */
+    $('#datepicker').datepicker( {
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        dateFormat: 'MM yy',
+        onClose: function(dateText, inst) { 
+            var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+            var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+            $(this).datepicker('setDate', new Date(year, month, 1));
+        }
+    });
+});
    </script>
 
 </body>
