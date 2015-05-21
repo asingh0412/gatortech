@@ -4,24 +4,8 @@ include('includes/session.php');
 require "includes/db.php";
 
 // Form handling
-$name = $_POST['name'];
-$email = $_POST['email'];
-$form_password = $_POST['password'];
-$prog = $_POST['program'];
-$_date = $_POST['datepicker'];
-
-$vars = array('name', 'email', 'password', 'program', 'datepicker',);
-
-foreach($vars as $var_name)
-{
-
-   if(!empty($_POST[$var_name])) 
-   {
-        
-    }
-}
-
-try
+if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['program']) && !empty($_POST['datepicker'])) {
+  try
         {
             // New database connection
             $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
@@ -34,12 +18,18 @@ try
             // $stmt->execute();
     
             //header("Location: index.php");
-            echo 'Connected';
+            echo 'Form submitted';
         }
         catch (PDOException $e)
         {
             echo $e->getMessage();
         }
+} else {
+  echo 'Please fill out all required fields';
+}
+    
+
+  echo $error;
 
 ?>
 
