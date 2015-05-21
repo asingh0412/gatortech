@@ -100,8 +100,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- <script src="js/post_insert.js"></script> -->
-    <script src="ajax/script.js"></script>
 </body>
 </html>
