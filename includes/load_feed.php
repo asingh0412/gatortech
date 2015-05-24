@@ -5,11 +5,12 @@
         $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
             
         // Login account verification
-        $sql = $dbh->prepare("SELECT picture FROM account WHERE email = '$_SESSION[login_session]'");
+        $sql = $dbh->prepare("SELECT picture, status FROM account WHERE email = '$_SESSION[login_session]'");
         $sql->execute();
         $result = $sql->fetch();
         
         $nav_picture = $result['picture'];
+        $nav_color = $result['status'];
     }
     catch (PDOException $e)
     {

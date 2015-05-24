@@ -21,7 +21,7 @@
     
     <body>
         <div id="site-container">
-            <?php echo "<div class='container-fluid ' id='nav'>"; ?>
+            <?php echo "<div class='container-fluid $nav_color' id='nav'>"; ?>
                 <a href='profile.php' id="signout-link"> Profile </a>
                 <div id='profile-bubble'>
                     <?php
@@ -37,9 +37,9 @@
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
                 
                 <div class='post-container text-left'>
-                    <div class='user-img-container'>
-                        <?php
-                            echo "<img src=$nav_picture
+                    <?php echo "
+                    <div class='user-img-container $nav_color'>
+                            <img src=$nav_picture
                             class='user-img'
                             alt='Placeholder for image'/>";
                         ?>
@@ -51,7 +51,7 @@
                                             required autofocus></textarea></span>
                             <hr class="hr-basic">
                             <div id="post-form-submit-btn" class="form-group">
-                                <input class="btn btn-primary profile-feed-btn" type="submit" id="post" name="post" value="Post">
+                                <?php echo "<input class='btn btn-primary profile-feed-btn $nav_color' type='submit' id='post' name='post' value='Post'>"; ?>
                             </div>
                         </form> 
                     </div>
