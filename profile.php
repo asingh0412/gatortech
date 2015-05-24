@@ -29,7 +29,9 @@
 
 <body>
     <div id="site-container">
-        <div class="container-fluid" id="nav">
+	<?php echo "
+	    <div class='container-fluid $nav_color' id='nav'>";
+	?>
 	    <a href='index.php' id="signout-link"> Feed </a>
 	    <div id='profile-bubble'>
 		<?php
@@ -63,7 +65,7 @@
 	    <!--<h3>News Feed</h3>-->
 	    <?php foreach($result2 as $row) {
                     echo "<div class='post-container text-left'>
-                            <div class='user-img-container'>
+                            <div class='user-img-container ".$row[user_status]."'>
                                 <img src=".$row[picture]."
                                 class='user-img'
                                 alt='Placeholder for image'/>
@@ -71,7 +73,7 @@
                             <div class='container-fluid post-body'>
                                 <form class='user-btn-link' method='post' action='profile.php'>
                                     <input type='hidden' id='user_email' name='user_email' value=".$row[user_email].">
-                                    <button class='btn btn-primary profile-feed-btn'>".$row[user_name]."</button>
+                                    <button class='btn btn-primary profile-feed-btn ".$row[user_status]."'>".$row[user_name]."</button>
                                 </form>
                                 <div class='delete-post-container'>";
                                 

@@ -5,11 +5,14 @@
             $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
                 
             // Login account verification
-            $sql = $dbh->prepare("SELECT picture FROM account WHERE email = '$_SESSION[login_session]'");
+            $sql = $dbh->prepare("SELECT picture, status FROM account WHERE email = '$_SESSION[login_session]'");
             $sql->execute();
             $result = $sql->fetch();
             
             $nav_picture = $result['picture'];
+            $nav_color = $result['status'];
+            
+            $dbh = null;
         }
         catch (PDOException $e)
         {
@@ -24,7 +27,7 @@
                 $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
                     
                 // Login account verification
-                $sql = $dbh->prepare("SELECT program, status, name, picture FROM account WHERE email = '$_POST[user_email]'");
+                $sql = $dbh->prepare("SELECT program, status, name, picture, status FROM account WHERE email = '$_POST[user_email]'");
                 $sql->execute();
                 $result = $sql->fetch();
                 
@@ -32,8 +35,9 @@
                 $status = $result['status'];
                 $name = $result['name'];
                 $picture = $result['picture'];
+                $status = $result['status'];
     
-                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email, picture, ID FROM feed WHERE user_email = '$_POST[user_email]' ORDER BY post_date DESC");
+                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email, picture, user_status, ID FROM feed WHERE user_email = '$_POST[user_email]' ORDER BY post_date DESC");
                 $sql2->execute();
                 $result2 = $sql2->fetchAll();
             }
@@ -50,7 +54,7 @@
                 $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
                     
                 // Login account verification
-                $sql = $dbh->prepare("SELECT program, status, name, picture FROM account WHERE email = '$_SESSION[login_session]'");
+                $sql = $dbh->prepare("SELECT program, status, name, picture, status FROM account WHERE email = '$_SESSION[login_session]'");
                 $sql->execute();
                 $result = $sql->fetch();
                 
@@ -58,8 +62,9 @@
                 $status = $result['status'];
                 $name = $result['name'];
                 $picture = $result['picture'];
+                $status = $result['status'];
     
-                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email, picture, ID FROM feed WHERE user_email = '$_SESSION[login_session]' ORDER BY post_date DESC");
+                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email, picture, user_status, ID FROM feed WHERE user_email = '$_SESSION[login_session]' ORDER BY post_date DESC");
                 $sql2->execute();
                 $result2 = $sql2->fetchAll();
                 
