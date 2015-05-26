@@ -58,6 +58,8 @@ if (isset($_POST['submit'])) {
     <title>Create a new account</title>
     <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/create_account.css">
+
     
     <!-- Hide the calendar default view -->
     <style>
@@ -70,13 +72,14 @@ if (isset($_POST['submit'])) {
   <body>
     <form action="create_account.php" method="POST" class="form-group">
       <p><label>Student Name
-        <input type="text" name="name" placeholder="Full name" class="form-control" autofocus required> </label>
+        <input type="text" name="name" placeholder="Full name" class="form-control" maxlength="64" autofocus required></label>
         <p><label>Email
-        <input type="email" name="email" placeholder="Email address" class="form-control" required></label>
+        <input type="email" name="email" placeholder="Email address" class="form-control" maxlength="64" required></label>
                 <p><label>Password
-        <input type="password" name="password" placeholder="Password" class="form-control" required></label>
+        <input type="password" name="password" placeholder="Password" class="form-control" maxlength="64" required></label>
 
-        <p><label>Program<select name="program" class="form-control">
+        <p><label>Program<select name="program" class="form-control" required>
+          <option value="">Please select a degree</option>
           <option value="sd">Software Development</option>
           <option value="nw">Networking</option>
         </select></label>
