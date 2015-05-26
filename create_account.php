@@ -4,18 +4,39 @@ include('includes/session.php');
 require "includes/db.php";
 
 // Form handling
-if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['program']) && !empty($_POST['datepicker'])) {
+if (isset($_POST['submit'])) {
+
   try
-        {
+      {
             // New database connection
             $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
+
+            $sql = $dbh->prepare("SELECT name, picture, status FROM account WHERE email = '$_SESSION[login_session]'");
+            $sql->execute();
+            $result = $sql->fetch();
+
+            $program = $_POST['program'];
+            $status = 'Student';
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $name = $_POST['name'];
+            $picture = $result['picture'];
+            $egd = $POST['egd'];
+
+            // Password encryption using PHP 5.5 Password Hashing
+            //$hash = password_hash($password, PASSWORD_DEFAULT);
     
-            // $stmt = $dbh->prepare("INSERT INTO feed (user_email, user_name, user_post, picture) VALUES (:user_email, :user_name, :user_post, :picture)");
-            // $stmt->bindParam(':user_name', $name);
-            // $stmt->bindParam(':user_email', $_SESSION['login_session']);
-            // $stmt->bindParam(':user_post', $_POST['message']);
-            // $stmt->bindParam(':picture', $picture);
-            // $stmt->execute();
+            $stmt = $dbh->prepare("INSERT INTO account (program, status, email, password, name, picture, egd) 
+              VALUES (:program, :status, :email, :password, :name, :picture, :egd)");
+            $stmt->bindParam(':program', $program);
+            $stmt->bindParam(':status', $status);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':picture', $picture);
+            $stmt->bindParam(':egd', $_POST['egd']);
+
+            $stmt->execute();
     
             //header("Location: index.php");
             echo 'Form submitted';
@@ -24,12 +45,7 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password
         {
             echo $e->getMessage();
         }
-} else {
-  echo 'Please fill out all required fields';
 }
-    
-
-  echo $error;
 
 ?>
 
@@ -54,7 +70,7 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password
   <body>
     <form action="create_account.php" method="POST" class="form-group">
       <p><label>Student Name
-        <input type="text" name="name" placeholder="Full name" class="form-control" autofocus pattern="[A-Za-z]+\s[A-Za-z]+" required> </label>
+        <input type="text" name="name" placeholder="Full name" class="form-control" autofocus required> </label>
         <p><label>Email
         <input type="email" name="email" placeholder="Email address" class="form-control" required></label>
                 <p><label>Password
@@ -65,8 +81,8 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password
           <option value="nw">Networking</option>
         </select></label>
         <p><label>Est. Grad Date
-        <input type="text" name="datepicker" placeholder="Select a date" id="datepicker" class="form-control" required</label>
-        <input id="submit" type="submit" value="Create">
+        <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required</label>
+        <input name="submit" id="submit" type="submit" value="Create">
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
