@@ -1,0 +1,12 @@
+body {
+  padding-left: 10px;
+}
+
+input:invalid, input:required {
+  outline: 1px solid red;
+}
+
+input:valid {
+  outline: 1px solid green;
+}
+
