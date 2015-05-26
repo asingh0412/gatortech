@@ -17,7 +17,7 @@
     
             // display all of the rows
     
-            $data = $_POST['serialize'];
+            //$data = $_POST['serialize'];
             $name = $result['name'];
             $picture = $result['picture'];
             $status = $result['status'];
