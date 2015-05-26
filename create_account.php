@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
             $stmt->execute();
     
             //header("Location: index.php");
-            echo 'Form submitted';
+            echo 'Account created';
         }
         catch (PDOException $e)
         {
