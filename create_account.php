@@ -11,9 +11,18 @@ if (isset($_POST['submit'])) {
             // New database connection
             $dbh = new PDO("mysql:host=$hostname; dbname=mlant_GT", $username, $password);
 
-            $sql = $dbh->prepare("SELECT name, picture, status FROM account WHERE email = '$_SESSION[login_session]'");
+            $sql = $dbh->prepare("SELECT name, picture, email status FROM account WHERE email = '$_SESSION[login_session]'");
             $sql->execute();
+
             $result = $sql->fetch();
+
+            $email = $dbh->prepare("SELECT email FROM account WHERE email = '$_POST[email]'");
+            $email->execute();
+
+            // Testing if the account has been created 
+            if ($email->rowCount() > 0) {
+              echo 'Account already exists';
+            } else {
 
             $program = $_POST['program'];
             $status = 'Student';
@@ -40,13 +49,13 @@ if (isset($_POST['submit'])) {
     
             //header("Location: index.php");
             echo 'Account created';
+          }
         }
         catch (PDOException $e)
         {
             echo $e->getMessage();
         }
-}
-
+      }
 ?>
 
 <!DOCTYPE html>
