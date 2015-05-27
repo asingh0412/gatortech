@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
             $stmt->execute();
     
             //header("Location: index.php");
-            echo 'Account created';
+            echo '<p>Account created';
           }
         }
         catch (PDOException $e)
@@ -95,6 +95,8 @@ if (isset($_POST['submit'])) {
         <p><label>Est. Grad Date
         <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required</label>
         <input name="submit" id="submit" type="submit" value="Create">
+
+        <h4><a href="index.php">Back to Feed</a>
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
