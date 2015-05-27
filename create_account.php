@@ -80,8 +80,8 @@ if (isset($_POST['submit'])) {
 
         <p><label>Program<select name="program" class="form-control" required>
           <option value="">Please select a degree</option>
-          <option value="sd">Software Development</option>
-          <option value="nw">Networking</option>
+          <option value="Software Development">Software Development</option>
+          <option value="Networking">Networking</option>
         </select></label>
         <p><label>Est. Grad Date
         <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required</label>
