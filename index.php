@@ -28,8 +28,8 @@
                         echo "<a href='profile.php'><img src=$nav_picture id='profile-picture-sm'></a>";
                     ?>
                 </div>
-                <a href='signout.php' id='nav-glyph' class='glyphicon glyphicon-log-out'></a>
-	    <a id='nav-glyph' class='glyphicon glyphicon-cog'></a>
+                <a href='signout.php' id='nav-glyph' class='glyphicon glyphicon-log-out' title='Logout'></a>
+	    <a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>
             </div>
         
         <!-- Center the page in the middle and contain the layout
