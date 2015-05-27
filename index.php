@@ -21,7 +21,12 @@
     
     <body>
         <div id="site-container">
-            <?php echo "<div class='container-fluid $nav_color' id='nav'>"; ?>
+            <?php echo "<div class='container-fluid $nav_color' id='nav'>"; 
+            
+            if ($nav_color == 'Admin') 
+                echo "<a href='create_account.php'>Create Account</a>";
+            ?>
+
                 <a href='profile.php' id="signout-link"> Profile </a>
                 <div id='profile-bubble'>
                     <?php
@@ -29,6 +34,7 @@
                     ?>
                 </div>
                 <a href='signout.php' id='nav-glyph' class='glyphicon glyphicon-log-out' title='Logout'></a>
+
 	    <a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>
             </div>
         
