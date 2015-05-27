@@ -25,6 +25,9 @@
             
             if ($nav_color == 'Admin') 
                 echo "<a href='create_account.php'>Create Account</a>";
+
+                echo "<a href='summary.php'>View Accounts</a>";
+
             ?>
 
                 <a href='profile.php' id="signout-link"> Profile </a>
@@ -35,7 +38,9 @@
                 </div>
                 <a href='signout.php' id='nav-glyph' class='glyphicon glyphicon-log-out' title='Logout'></a>
 
-	    <a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>
+	    <!--
+        <a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>
+        -->
             </div>
         
         <!-- Center the page in the middle and contain the layout
