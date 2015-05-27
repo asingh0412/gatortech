@@ -18,6 +18,9 @@
         $sql = "DELETE FROM account where email = '$id'";
         $result = $dbh->query($sql) ;
         
+        $sql1 = "DELETE FROM feed where user_email = '$id'";
+        $result = $dbh->query($sql1) ;
+        
         $current_page = $_SERVER['HTTP_REFERER'];
         header("location: $current_page");
         
