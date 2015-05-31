@@ -5,6 +5,10 @@
 
     if($_POST['message'])
     {
+        require_once 'includes/hashtag.php';
+        $hashtag = convertHashTags($_POST['message']);
+        echo $hashtag;
+        
         try
         {
             // New database connection
