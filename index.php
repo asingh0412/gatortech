@@ -56,7 +56,7 @@
                         ?>
                     </div>
                     <div class='container-fluid post-body'>
-                        <form id="post-form" method="post" action="">
+                        <form id="post-form" method="post" action="feed_post.php">
                             <span><textarea type="text" autocomplete="off" placeholder="What's on your mind?"
                                             class="text-box-post" name="message" maxlength="400"
                                             required autofocus></textarea></span>
