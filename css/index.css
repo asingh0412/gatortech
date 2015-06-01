@@ -92,12 +92,6 @@ a:link, a:hover, a:visited, a:active {
     color: white;
 }
 
-#tags {
-    -webkit-appearance: none;
-    color: white;
-    border-radius: 0px;
-}
-
 .post-field {
     border: none;
 }

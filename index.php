@@ -23,11 +23,11 @@
         <div id="site-container">
             <?php echo "<div class='container-fluid $nav_color' id='nav'>"; 
             
-            if ($nav_color == 'Admin')
-                {
-                    echo "<a href='create_account.php'>Create Account</a>";
-                    echo "<a href='summary.php'>View Accounts</a>";
-                }
+            if ($nav_color == 'Admin') 
+                echo "<a href='create_account.php'>Create Account</a>";
+
+                echo "<a href='summary.php'>View Accounts</a>";
+
             ?>
 
                 <a href='profile.php' id="signout-link"> Profile </a>
@@ -56,35 +56,12 @@
                         ?>
                     </div>
                     <div class='container-fluid post-body'>
-                        <form id="post-form" method="post" action="feed_post.php" class="form-inline ajax">
+                        <form id="post-form" method="post" action="">
                             <span><textarea type="text" autocomplete="off" placeholder="What's on your mind?"
                                             class="text-box-post" name="message" maxlength="400"
-                                            required autofocus data-validate="required"></textarea></span>
+                                            required autofocus></textarea></span>
                             <hr class="hr-basic">
                             <div id="post-form-submit-btn" class="form-group">
-								<label for="tags">Select a Tag: </label>
-								<?php echo "<div id='tag-menu' class='form-group'>
-									<select name='tags' id='tags' class='form-control $nav_color'>
-										<option value='books'>Books</option>
-										<option value='internships'>Internships</option>
-										<option value='moneyforschool'>MoneyForSchool</option>
-										<option value='coursework'>Coursework</option>
-										<option value='jobs'>Jobs</option>
-										<option value='miscellaneous' selected>Miscellaneous</option>
-									</select>
-								</div>"; ?>
-                                <?php echo "<input class='btn btn-primary profile-feed-btn $nav_color' type='submit' id='post' name='post' value='POST'>"; ?>
-                            <div id="post-form-submit-btn" class="form-group form-inline">
-                                <label for="tags">Select a Tag: </label>
-                                <div id="tag-menu" class="form-group">
-                                    <select name="tags" id="tags" class="form-control Student">
-                                        <option value="books">Books</option>
-                                        <option value="internships">Internships</option>
-                                        <option value="moneyforschool">Money For School</option>
-                                        <option value="coursework">Coursework</option>
-                                        <option value="jobs">Jobs</option>
-                                    </select>
-                                </div>
                                 <?php echo "<input class='btn btn-primary profile-feed-btn $nav_color' type='submit' id='post' name='post' value='Post'>"; ?>
                             </div>
                         </form> 
@@ -117,7 +94,7 @@
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
                                 <hr class='hr-basic'>
-                                <div class='post-text'>".$row[user_post]." #".$row[hashtag]."
+                                <div class='post-text'>".$row[user_post]."
                                 <input type='hidden' id='user_post' name='user_post'
                                     value=".$row[user_post]."> 
                                 </div>
@@ -134,17 +111,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- <script src="ajax/script.js"></script> -->
-	<script src="js/verify.notify.min.js"></script>
-	<!-- <script src="ajax/script.js"></script> -->
-	
-	<script>
-		$(document).ready(function() { 
-			var form = $("form");
-			form.verify();
-			form.attr('novalidate', 'novalidate');
-		});
-		
-	</script>
+    <script src="ajax/script.js"></script>
 </body>
 </html>
