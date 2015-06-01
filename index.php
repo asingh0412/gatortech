@@ -22,10 +22,10 @@
     <body>
         <div id="site-container">
             <?php echo "<div class='container-fluid $nav_color' id='nav'>"; 
-            
-            if ($nav_color == 'Admin') 
+            if ($nav_color == 'Admin') {
                 echo "<a href='create_account.php'>Create Account</a>";
                 echo "<a href='summary.php'>View Accounts</a>";
+            }
             ?>
             <a href='profile.php' id="signout-link"> Profile </a>
             <div id='profile-bubble'>
@@ -39,14 +39,10 @@
             <a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>
             -->
         </div>
-        
-        <!-- Center the page in the middle and contain the layout
-        to a specific width -->
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
-                
                 <div class='post-container text-left'>
                     <?php echo "
-                    <div class='user-img-container $nav_color'>
+                            <div class='user-img-container $nav_color'>
                             <img src=$nav_picture
                             class='user-img'
                             alt='Placeholder for image'/>";
@@ -64,10 +60,8 @@
                         </form> 
                     </div>
                 </div>
-                
                 <div id = 'feed-container'>
-                <!--<h3>News Feed</h3>-->
-                <?php foreach($result as $row) {
+                    <?php foreach($result as $row) {
                     echo "<div class='post-container text-left'>
                             <div class='user-img-container ".$row[user_status]."'>
                                 <img src=".$row[picture]."
@@ -84,7 +78,7 @@
                                 if($_SESSION['login_session'] == $row[user_email]) {
                                     echo "<a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>"; 
                                 }
-                                
+                            
                                 echo "</div><br>
                                 <div class='post-date'>
                                     ".substr($row[post_date], 10, 6)." 
@@ -104,7 +98,6 @@
                 </div>
             </div>
         </div>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
