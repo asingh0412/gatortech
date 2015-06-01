@@ -62,6 +62,15 @@
                                             required autofocus></textarea></span>
                             <hr class="hr-basic">
                             <div id="post-form-submit-btn" class="form-group">
+								<div id="tag-menu" class="form-group">
+									<select>
+										<option value="books">Books</option>
+										<option value="internships">Internships</option>
+										<option value="moneyforschool">Money For School</option>
+										<option value="coursework">Coursework</option>
+										<option value="jobs">Jobs</option>
+									</select>
+								</div>
                                 <?php echo "<input class='btn btn-primary profile-feed-btn $nav_color' type='submit' id='post' name='post' value='Post'>"; ?>
                             </div>
                         </form> 
