@@ -31,7 +31,7 @@
             $stmt->bindParam(':user_status', $status);
             $stmt->execute();
     
-            header("Location: index.php");
+            //header("Location: index.php");
         }
         catch (PDOException $e)
         {
