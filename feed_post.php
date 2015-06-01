@@ -29,15 +29,15 @@
                 echo "nothing";
             }
             $stmt = $dbh->prepare("INSERT INTO feed (user_email, user_name, user_post, picture, user_status, hashtag) VALUES (:user_email, :user_name, :user_post, :picture, :user_status, :hashtag)");
+
             $stmt->bindParam(':user_name', $name);
             $stmt->bindParam(':user_email', $_SESSION['login_session']);
             $stmt->bindParam(':user_post', $_POST['message']);
             $stmt->bindParam(':picture', $picture);
             $stmt->bindParam(':user_status', $status);
-            $stmt->bindParam(':hashtag', $_POST['tags']);
             $stmt->execute();
     
-            //header("Location: index.php");
+            header("Location: index.php");
         }
         catch (PDOException $e)
         {

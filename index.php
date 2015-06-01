@@ -23,11 +23,11 @@
         <div id="site-container">
             <?php echo "<div class='container-fluid $nav_color' id='nav'>"; 
             
-            if ($nav_color == 'Admin') 
-                echo "<a href='create_account.php'>Create Account</a>";
-
-                echo "<a href='summary.php'>View Accounts</a>";
-
+            if ($nav_color == 'Admin')
+                {
+                    echo "<a href='create_account.php'>Create Account</a>";
+                    echo "<a href='summary.php'>View Accounts</a>";
+                }
             ?>
 
                 <a href='profile.php' id="signout-link"> Profile </a>
@@ -74,6 +74,18 @@
 									</select>
 								</div>"; ?>
                                 <?php echo "<input class='btn btn-primary profile-feed-btn $nav_color' type='submit' id='post' name='post' value='POST'>"; ?>
+                            <div id="post-form-submit-btn" class="form-group form-inline">
+                                <label for="tags">Select a Tag: </label>
+                                <div id="tag-menu" class="form-group">
+                                    <select name="tags" id="tags" class="form-control Student">
+                                        <option value="books">Books</option>
+                                        <option value="internships">Internships</option>
+                                        <option value="moneyforschool">Money For School</option>
+                                        <option value="coursework">Coursework</option>
+                                        <option value="jobs">Jobs</option>
+                                    </select>
+                                </div>
+                                <?php echo "<input class='btn btn-primary profile-feed-btn $nav_color' type='submit' id='post' name='post' value='Post'>"; ?>
                             </div>
                         </form> 
                     </div>

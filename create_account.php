@@ -23,30 +23,33 @@ require 'includes/load_account.php';
 
   </head>
   <body>
-    <form action="create_account.php" method="POST" class="form-group">
-      <p><label>Student Name
-        <input type="text" name="name" placeholder="Full name" class="form-control" maxlength="64" autofocus required></label>
-        <p><label>Email
-        <input type="email" name="email" placeholder="Email address" class="form-control" maxlength="64" required></label>
-                <p><label>Password
-        <input type="password" name="password" placeholder="Password" class="form-control" maxlength="64" required></label>
-
-        <p><label>Program<select name="program" class="form-control" required>
-          <option value="">Please select a degree</option>
-          <option value="Software Development">Software Development</option>
-          <option value="Networking">Networking</option>
-        </select></label>
-        <p><label>Est. Grad Date
-        <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required</label>
-        <input name="submit" id="submit" type="submit" value="Create">
-
-        <h4><a href="index.php">Back to Feed</a>
-
-
+    <div id='site-container' class='container-fluid'>
+      <div id='page-content' class='contianer-fluid'>
+        <form action="create_account.php" method="POST" class="form-group">
+          <p><label>Student Name
+          <input type="text" name="name" placeholder="Full name" class="form-control" maxlength="64" autofocus required></label>
+          <p><label>Email
+          <input type="email" name="email" placeholder="Email address" class="form-control" maxlength="64" required></label>
+                  <p><label>Password
+          <input type="password" name="password" placeholder="Password" class="form-control" maxlength="64" required></label>
+  
+          <p><label>Program<select name="program" class="form-control" required>
+            <option value="">Please select a degree</option>
+            <option value="Software Development">Software Development</option>
+            <option value="Networking">Networking</option>
+          </select></label>
+          <p><label>Est. Grad Date
+          <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required</label>
+          <input name="submit" id="submit" type="submit" value="Create">
+  
+          <h4><a href="index.php">Back to Feed</a>
+        </form>
+      </div>
+    </div>
+    
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-      </form>
       <script>
   // jQuery Datepicker  
   $(function()
