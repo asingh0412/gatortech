@@ -23,11 +23,6 @@
             $picture = $result['picture'];
             $status = $result['status'];
             
-            if (isset($_POST['tags'])) {
-                echo $_POST['tags'];
-            } else {
-                echo "nothing";
-            }
             $stmt = $dbh->prepare("INSERT INTO feed (user_email, user_name, user_post, picture, user_status, hashtag) VALUES (:user_email, :user_name, :user_post, :picture, :user_status, :hashtag)");
             $stmt->bindParam(':user_name', $name);
             $stmt->bindParam(':user_email', $_SESSION['login_session']);
