@@ -3,11 +3,8 @@
     include('includes/session.php');
     require "includes/db.php";
 
-    if($_POST['message'])
+    if($_POST['message'] && $_POST['message'] != '' && strlen($_POST['message'] != 0))
     {
-        require_once 'includes/hashtag.php';
-        $hashtag = convertHashTags($_POST['message']);
-        echo $hashtag;
         
         try
         {
