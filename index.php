@@ -56,7 +56,7 @@
                         ?>
                     </div>
                     <div class='container-fluid post-body'>
-                        <form id="post-form" method="post" action="">
+                        <form id="post-form" method="post" action="feed_post.php">
                             <span><textarea type="text" autocomplete="off" placeholder="What's on your mind?"
                                             class="text-box-post" name="message" maxlength="400"
                                             required autofocus></textarea></span>
@@ -111,6 +111,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="ajax/script.js"></script>
 </body>
 </html>

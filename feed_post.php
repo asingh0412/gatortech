@@ -1,13 +1,12 @@
 <?
-
     include('includes/session.php');
     require "includes/db.php";
 
     if($_POST['message'])
     {
-        require_once 'includes/hashtag.php';
-        $hashtag = convertHashTags($_POST['message']);
-        echo $hashtag;
+        //require_once 'includes/hashtag.php';
+        //$hashtag = convertHashTags($_POST['message']);
+        //echo $hashtag;
         
         try
         {
@@ -34,6 +33,8 @@
             $stmt->bindParam(':user_status', $status);
             $stmt->execute();
     
+            $dbh = null;
+            
             header("Location: index.php");
         }
         catch (PDOException $e)
