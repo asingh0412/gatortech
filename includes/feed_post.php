@@ -32,7 +32,7 @@
             $stmt->bindParam(':hashtag', $_POST['tags']);
             $stmt->execute();
     
-            //header("Location: index.php");
+            header("Location: index.php");
         }
         catch (PDOException $e)
         {
