@@ -57,6 +57,17 @@
                             <div id="post-form-submit-btn" class="form-group">
                                 <?php echo "<input class='btn btn-primary profile-feed-btn $nav_color' type='submit' id='post' name='post' value='Post'>"; ?>
                             </div>
+                            <div id='hashtag-input-field-container'>
+                                <label for='hashtag-input-field'> Select a tag : </label>
+                                <select id='hashtag-input-field'>
+                                    <option value="books">books</option>
+                                    <option value="jobs">jobs</option>
+                                    <option value="events">events</option>
+                                    <option value=general">general</option>
+                                    <option value="internships">internships</option>
+                                    <option value="scholarships">scholarships</option>
+                                </select>
+                            </div>
                         </form> 
                     </div>
                 </div>

@@ -81,10 +81,31 @@ a:link, a:hover, a:visited, a:active {
     margin-top: 16px;
 }
 
+#hashtag-input-field-container {
+    margin-top: 16px;
+    display: inline-block;
+    float: right;
+}
+
+#hashtag-input-field {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0px;
+    border: none;
+    background-color: #1ABC9C;
+    color: white;
+    height: 34px;
+    width: 100px;
+    padding-left: 4px;
+}
+
 #post-form-submit-btn {
     margin-top: 16px;
+    margin-left: 16px;
     margin-bottom: 0px;
     float: right;
+    display: inline-block;
 }
 
 #signout-link {
@@ -96,7 +117,8 @@ a:link, a:hover, a:visited, a:active {
     border: none;
 }
 
-textarea:focus, input:focus {
+textarea:focus, inpu
+t:focus {
     outline: 0;
 }
 
