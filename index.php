@@ -11,7 +11,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
         <meta charset="utf-8">
         <title>Feed</title>
-
         <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" media="all" href="css/index.css">
         <!-- <script type="text/javascript" src="js/query.js"></script>
@@ -34,10 +33,7 @@
                 ?>
             </div>
             <a href='signout.php' id='nav-glyph' class='glyphicon glyphicon-log-out' title='Logout'></a>
-
-	    <!--
             <a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>
-            -->
         </div>
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
                 <div class='post-container text-left'>
@@ -85,11 +81,9 @@
                                     <button class='btn btn-primary profile-feed-btn ".$row[user_status]."'>".$row[user_name]."</button>
                                 </form>
                                 <div class='delete-post-container'>";
-                                
                                 if($_SESSION['login_session'] == $row[user_email]) {
                                     echo "<a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>"; 
                                 }
-                            
                                 echo "</div><br>
                                 <div class='post-date'>
                                     ".substr($row[post_date], 10, 6)." 
@@ -106,9 +100,9 @@
                 ?>
                 </div>
                 <hr class="hr-white">
-                </div>
             </div>
         </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
