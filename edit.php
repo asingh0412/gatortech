@@ -2,11 +2,6 @@
     include('includes/session.php');
     require "includes/db.php";
     require "includes/load_edit.php";
-    //require "includes/load_summary.php";
-    
-        //Turn on error reporting
-    ini_set('display_errors', 1);
-    error_reporting(E_ALL);
 ?>
 
 <!DOCTYPE html>

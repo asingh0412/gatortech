@@ -1,5 +1,5 @@
-<?
-require 'includes/load_account.php';
+<?php
+  require 'includes/load_account.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,15 +12,6 @@ require 'includes/load_account.php';
     <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/create_account.css">
-
-    
-    <!-- Hide the calendar default view -->
-    <style>
-    .ui-datepicker-calendar {
-    display: none;
-}​
-</style>
-
   </head>
   <body>
     <form action="create_account.php" method="POST" class="form-group">
@@ -28,7 +19,7 @@ require 'includes/load_account.php';
         <input type="text" name="name" placeholder="Full name" class="form-control" maxlength="64" autofocus required></label>
         <p><label>Email
         <input type="email" name="email" placeholder="Email address" class="form-control" maxlength="64" required></label>
-                <p><label>Password
+        <p><label>Password
         <input type="password" name="password" placeholder="Password" class="form-control" maxlength="64" required></label>
 
         <p><label>Program<select name="program" class="form-control" required>
@@ -39,10 +30,7 @@ require 'includes/load_account.php';
         <p><label>Est. Grad Date
         <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required</label>
         <input name="submit" id="submit" type="submit" value="Create">
-
-        <h4><a href="index.php">Back to Feed</a>
-
-
+        <h4><a href="index.php">Back to Feed</a></h4>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

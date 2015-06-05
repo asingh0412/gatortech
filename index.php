@@ -55,11 +55,11 @@
                             </div>
                             <div id='hashtag-input-field-container'>
                                 <label for='hashtag-input-field'> Select a tag : </label>
-                                <select id='hashtag-input-field'>
-                                    <option value="books">books</option>
+                                <select id='hashtag-input-field' name='hashtag-input-field'>
+                                    <option value=general>general</option>
                                     <option value="jobs">jobs</option>
                                     <option value="events">events</option>
-                                    <option value=general">general</option>
+                                    <option value="books">books</option>
                                     <option value="internships">internships</option>
                                     <option value="scholarships">scholarships</option>
                                 </select>
