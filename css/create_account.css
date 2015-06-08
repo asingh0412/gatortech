@@ -6,19 +6,11 @@ body {
   width: 250px;
 }
 
-input:required, input:invalid, select:invalid {
-  outline: 1px solid red;
-}
-
-input:valid, select:valid {
-  outline: 1px solid green;
-}
-
-input:focus {
-  outline: 1px solid blue;
+#datepicker[readonly] {
+  cursor: pointer;
+  background-color: #fff;
 }
 
 #submit {
   margin-top: 10px;
 }
-

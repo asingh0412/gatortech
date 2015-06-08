@@ -12,62 +12,52 @@ require 'includes/load_account.php';
     <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/create_account.css">
-
-    
-    <!-- Hide the calendar default view -->
-    <style>
-    .ui-datepicker-calendar {
-    display: none;
-}​
-</style>
-
+  
   </head>
+  
   <body>
-    <form action="create_account.php" method="POST" class="form-group">
-      <p><label>Student Name
-        <input type="text" name="name" placeholder="Full name" class="form-control" maxlength="64" autofocus required></label>
-        <p><label>Email
-        <input type="email" name="email" placeholder="Email address" class="form-control" maxlength="64" required></label>
-                <p><label>Password
-        <input type="password" name="password" placeholder="Password" class="form-control" maxlength="64" required></label>
-
-        <p><label>Program<select name="program" class="form-control" required>
-          <option value="">Please select a degree</option>
-          <option value="Software Development">Software Development</option>
-          <option value="Networking">Networking</option>
-        </select></label>
-        <p><label>Est. Grad Date
-        <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required</label>
-        <input name="submit" id="submit" type="submit" value="Create">
-
-        <h4><a href="index.php">Back to Feed</a>
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+    <form action="create_account.php" id="create_form" method="POST" class="form-group" autocomplete="false" novalidate>
+        <div class="form-group">
+          <label class="control-label">Student Name</label>
+          <input type="text" name="name" placeholder="Full name" class="form-control" maxlength="64" autofocus required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="Email address" class="form-control" maxlength="64" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password" placeholder="Password" class="form-control" maxlength="64"  required>
+        </div>
+  
+        <div class="form-group">
+          <label for="program">Program</label>
+          <select name="program" class="form-control" required>
+            <option value="">Please select a degree</option>
+            <option value="Software Development">Software Development</option>
+            <option value="Networking">Networking</option>
+          </select></label>
+        </div>
+        
+        <div class="form-group">
+          <label for="egd">Est. Grad Date</label>
+          <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" readonly="readonly" required>
+        </div>
+        
+        <button name="submit" id="submit" type="submit">Create</button>
       </form>
-      <script>
-  // jQuery Datepicker  
-  $(function()
-  {
-    /* Set to only show the month and year */
-    $('#datepicker').datepicker( {
-        changeMonth: true,
-        changeYear: true,
-        showButtonPanel: true,
-        dateFormat: 'MM yy',
-        onClose: function(dateText, inst) { 
-            var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
-            var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-            $(this).datepicker('setDate', new Date(year, month, 1));
-        }
-    });
-});
-   </script>
 
-</body>
+      <h4><a href="index.php">Back to Feed</a>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      
+      <script src="js/datepicker.js"></script>
+      <script src="js/validator.js"></script>
+      <script src="js/dominar-standalone.min.js"></script>
+      
+  </body>
 </html>
-
-
-
