@@ -1,5 +1,5 @@
-<?
-require 'includes/load_account.php';
+<?php
+  require 'includes/load_account.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,13 +12,14 @@ require 'includes/load_account.php';
     <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/create_account.css">
-  
+
   </head>
   
   <body>
+
     <form action="create_account.php" id="create_form" method="POST" class="form-group" autocomplete="false" novalidate>
         <div class="form-group">
-          <label class="control-label">Student Name</label>
+          <label for="name">Student Name</label>
           <input type="text" name="name" placeholder="Full name" class="form-control" maxlength="64" autofocus required>
         </div>
         
@@ -43,12 +44,10 @@ require 'includes/load_account.php';
         
         <div class="form-group">
           <label for="egd">Est. Grad Date</label>
-          <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" readonly="readonly" required>
-        </div>
-        
+          <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required>
+        </div>  
         <button name="submit" id="submit" type="submit">Create</button>
-      </form>
-
+    
       <h4><a href="index.php">Back to Feed</a>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
