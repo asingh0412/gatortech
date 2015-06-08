@@ -37,7 +37,7 @@
                 $picture = $result['picture'];
                 $status = $result['status'];
     
-                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email, picture, user_status, ID FROM feed WHERE user_email = '$_POST[user_email]' ORDER BY post_date DESC");
+                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email, picture, user_status, ID, hashtag FROM feed WHERE user_email = '$_POST[user_email]' ORDER BY post_date DESC");
                 $sql2->execute();
                 $result2 = $sql2->fetchAll();
             }
@@ -64,7 +64,7 @@
                 $picture = $result['picture'];
                 $status = $result['status'];
     
-                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email, picture, user_status, ID FROM feed WHERE user_email = '$_SESSION[login_session]' ORDER BY post_date DESC");
+                $sql2 = $dbh->prepare("SELECT user_name, user_post, post_date, user_email, picture, user_status, ID, hashtag FROM feed WHERE user_email = '$_SESSION[login_session]' ORDER BY post_date DESC");
                 $sql2->execute();
                 $result2 = $sql2->fetchAll();
                 
