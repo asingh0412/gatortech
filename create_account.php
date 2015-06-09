@@ -8,7 +8,7 @@
     <!-- Responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
     <meta charset="utf-8">
-    <title>Create a new account</title>
+    <title>Create Account</title>
     <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/create_account.css">
@@ -16,6 +16,10 @@
   </head>
   
   <body>
+    
+    <div class="container">
+      <h1>Create Account</h1>
+      <hr>
 
     <form action="create_account.php" id="create_form" method="POST" class="form-group" autocomplete="false" novalidate>
         <div class="form-group">
@@ -46,9 +50,10 @@
           <label for="egd">Est. Grad Date</label>
           <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required>
         </div>  
-        <button name="submit" id="submit" type="submit">Create</button>
+        <button class='btn btn-default' name="submit" id="submit" type="submit">Create</button>
     
-      <h4><a href="index.php">Back to Feed</a>
+      <h4><a href="index.php">Back to Feed</a></h4>
+    </div><!--Ending container div-->
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>

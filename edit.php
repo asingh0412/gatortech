@@ -36,7 +36,6 @@
     <div class="container">
     
         <h1>Edit Accounts</h1>
-        <h4 style="float: right"><a href="index.php">Back to Feed</a></h4>
         <hr>
         
         <!-- This form will auto fill so that it is easy to update-->
@@ -76,10 +75,8 @@
             </p>    
  
 
-            <button class="btn btn-default" type="submit" id="submit" name="submit-edit" >
-                Update
-            </button>
-        <!--<input name="submit" id="submit" type="submit" value="Create">-->
+            <button class="btn btn-default" type="submit" id="submit" name="submit-edit"> Update </button>
+            <h4><a href="index.php">Back to Feed</a></h4>
         </form>
     
     </div><!--Ending containter div-->

@@ -4,7 +4,7 @@
     //Turn on error reporting
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
-    print_r($_POST);
+    //print_r($_POST);
     
     /*
      * Updating the user data as need. 
@@ -55,7 +55,7 @@
             $stmt->bindParam(':email', $email1, PDO::PARAM_STR);
             $stmt->execute();
             
-            //header("location: ../summary.php");
+            header("location: ../summary.php");
             echo "edited the user";
           }
             
