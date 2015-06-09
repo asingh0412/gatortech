@@ -20,8 +20,19 @@ $(function() {
             errorMessages = form.querySelectorAll( ".error-message" ),
             parent;
             
+        // The function SetCustomValidity must be used against a native HTML object
+        var name = $('#name')[0];
+        var email = $('#email')[0];
+        var password = $('#password')[0];
+        var program = $('#program')[0];
+        var egd = $('#egd')[0];
+            
         // Set custom error messages     
-        document.getElementById("password").setCustomValidity("Password should contain uppercase and lower case letters, one number or special character, and be at least 9 characters.");
+        password.setCustomValidity("Password should contain uppercase and lower case letters, one number or special character, and be at least 9 characters.");
+        email.setCustomValidity("Please enter a valid email address.");
+        program.setCustomValidity("Please select a program option");
+        name.setCustomValidity("Please enter a name");
+        egd.setCustomValidity("Please select a graduation date");
 
 
         // Remove any existing messages

@@ -24,12 +24,12 @@
     <form action="create_account.php" name="create_form" method="POST" class="form-group" autocomplete="false" novalidate>
         <div class="form-group">
           <label for="name">Student Name</label>
-          <input type="text" name="name" placeholder="Full name" class="form-control" pattern="[A-Za-z ]+" autofocus required>
+          <input type="text" name="name" id="name" placeholder="Full name" class="form-control" pattern="[A-Za-z ]+" autofocus required>
         </div>
         
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" name="email" placeholder="Email address" class="form-control" required>
+          <input type="email" name="email" id="email" placeholder="Email address" class="form-control" required>
         </div>
         
         <div class="form-group">
@@ -39,7 +39,7 @@
   
         <div class="form-group">
           <label for="program">Program</label>
-          <select name="program" class="form-control" required>
+          <select name="program" id="program" class="form-control" required>
             <option value="">Please select a degree</option>
             <option value="Software Development">Software Development</option>
             <option value="Networking">Networking</option>
@@ -48,13 +48,13 @@
         
         <div class="form-group">
           <label for="egd">Est. Grad Date</label>
-          <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required>
+          <input type="text" name="egd" id="egd" placeholder="Select a date" id="datepicker" class="form-control" required>
         </div>  
-<<<<<<< HEAD
+
         <button name="submit" type="submit" id="submit">Create</button>
-=======
+
         <button class='btn btn-default' name="submit" id="submit" type="submit">Create</button>
->>>>>>> c1e50571f1cfa726d915fdbd84ddfc130a7033ff
+
     
       <h4><a href="index.php">Back to Feed</a></h4>
     </div><!--Ending container div-->
