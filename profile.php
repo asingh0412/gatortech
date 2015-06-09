@@ -87,7 +87,7 @@
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
                                 <hr class='hr-basic'>
-                                <div class='post-text'>".$row[user_post]."
+                                <div class='post-text'>".$row[user_post]."<a href='tag_search.php'>  #".$row[hashtag]."</a>"."
                                 <input type='hidden' id='user_post' name='user_post'
                                     value=".$row[user_post]."> 
                                 </div>

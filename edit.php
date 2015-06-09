@@ -2,6 +2,11 @@
     include('includes/session.php');
     require "includes/db.php";
     require "includes/load_edit.php";
+    //require "includes/load_summary.php";
+    
+        //Turn on error reporting
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
 ?>
 
 <!DOCTYPE html>
@@ -29,30 +34,27 @@
 <body>
     
     <div class="container">
-
+    
         <h1>Edit Accounts</h1>
-        <h4 style="float: right"><a href="index.php">Back to Feed</a></h4>
         <hr>
         
+        <!-- This form will auto fill so that it is easy to update-->
         <form action="includes/edit_user.php" method="POST" class="form-group">
             
             <label>Student Name
                 <input type="text" name="name" placeholder="Full name" class="form-control" maxlength="64" autofocus value="<?php echo $name;?>">
             </label>
             
-            <p>
-            <label>
-                <input type="hidden" name="id"  placeholder="id" class="form-control" maxlength="64" value="<?=$email?>" >
-            </label>
-            </p>
-            
+            <!-- Just for ID sake-->
+            <input type="hidden" name="id"  placeholder="id" class="form-control" maxlength="64" value="<?=$email?>" >
+        
             <p>
             <label>Email
                 <input type="email" name="email" placeholder="Email address" class="form-control" maxlength="64" value="<?=$email?>" >
             </label>
             </p>
             
-            <!-- -->  
+            <!-- For auto fill the form -->  
             <?php
                 $selected = $program;
             ?>
@@ -73,10 +75,8 @@
             </p>    
  
 
-            <button class="btn btn-default" type="submit" id="submit" name="submit-edit" >
-                Update
-            </button>
-        <!--<input name="submit" id="submit" type="submit" value="Create">-->
+            <button class="btn btn-default" type="submit" id="submit" name="submit-edit"> Update </button>
+            <h4><a href="index.php">Back to Feed</a></h4>
         </form>
     
     </div><!--Ending containter div-->

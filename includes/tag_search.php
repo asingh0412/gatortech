@@ -1,7 +1,7 @@
 <?php
     include('includes/session.php');
     require "includes/db.php";
-    require "includes/load_feed.php";
+    require "includes/load_tag.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
         <!-- Responsive design -->
         <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
         <meta charset="utf-8">
-        <title>Feed</title>
+        <title>Tags</title>
         <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" media="all" href="css/index.css">
         <!-- <script type="text/javascript" src="js/query.js"></script>
@@ -36,36 +36,17 @@
             <a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>
         </div>
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
-                <div class='post-container text-left'>
-                    <?php echo "
-                            <div class='user-img-container $nav_color'>
-                            <img src=$nav_picture
-                            class='user-img'
-                            alt='Placeholder for image'/>";
-                        ?>
-                    </div>
-                    <div class='container-fluid post-body'>
-                        <form id="post-form" method="post" action="feed_post.php">
-                            <span><textarea type="text" autocomplete="off" placeholder="What's on your mind?"
-                                            class="text-box-post" name="message" maxlength="400"
-                                            required autofocus></textarea></span>
-                            <hr class="hr-basic">
-                            <div id="post-form-submit-btn" class="form-group">
-                                <?php echo "<input class='btn btn-primary profile-feed-btn $nav_color' type='submit' id='post' name='post' value='Post'>"; ?>
-                            </div>
-                            <div id='hashtag-input-field-container'>
-                                <label for='hashtag-input-field'> Select a tag : </label>
-                                <select id='hashtag-input-field' name='hashtag-input-field'>
-                                    <option value="general">general</option>
-                                    <option value="jobs">jobs</option>
-                                    <option value="events">events</option>
-                                    <option value="books">books</option>
-                                    <option value="internships">internships</option>
-                                    <option value="scholarships">scholarships</option>
-                                </select>
-                            </div>
-                        </form> 
-                    </div>
+                
+                <div id= 'hashtag-button'>
+                    
+
+                    <a href='tag_search.php?id=general'>General</a>
+                    <a href='tag_search.php?id=books'>Books</a>
+                    <a href='tag_search.php?id=internships'>Internships</a>
+                    <a href='tag_search.php?id=events'>Events</a>
+                    <a href='tag_search.php?id=jobs'>Jobs</a>
+                    <a href='tag_search.php?id=scholarships'>Scholarships</a>
+                    
                 </div>
                 <div id = 'feed-container'>
                     <?php foreach($result as $row) {
@@ -90,14 +71,14 @@
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
                                 <hr class='hr-basic'>
-                                <div class='post-text'>".$row[user_post]."<a href='tag_search.php?id=$row[hashtag]'>#".$row[hashtag]."</a>"."
+                                <div class='post-text'>".$row[user_post]."<a href='tag_search.php'>#".$row[hashtag]."</a>"."
                                 <input type='hidden' id='user_post' name='user_post'
                                     value='{$row[user_post]}'> 
                                 </div>
                             </div>
                         </div>";
                     }
-                ?>       
+                ?>
                 </div>
                 <hr class="hr-white">
             </div>

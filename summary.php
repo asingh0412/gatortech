@@ -72,7 +72,7 @@
             
             </tbody>
         </table> <!-- End of table-->
-            
+            <h4 style="float: right"><a href="index.php">Back to Feed</a></h4>
 </div><!-- End of Container div-->
 
     <script>
