@@ -17,20 +17,20 @@
   
   <body>
 
-    <form action="create_account.php" id="create_form" method="POST" class="form-group" autocomplete="false" novalidate>
+    <form action="create_account.php" name="create_form" method="POST" class="form-group" autocomplete="false" novalidate>
         <div class="form-group">
           <label for="name">Student Name</label>
-          <input type="text" name="name" placeholder="Full name" class="form-control" maxlength="64" autofocus required>
+          <input type="text" name="name" placeholder="Full name" class="form-control" pattern="[A-Za-z ]+" autofocus required>
         </div>
         
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" name="email" placeholder="Email address" class="form-control" maxlength="64" required>
+          <input type="email" name="email" placeholder="Email address" class="form-control" required>
         </div>
         
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" name="password" placeholder="Password" class="form-control" maxlength="64"  required>
+          <input type="password" name="password" id="password" placeholder="Password" class="form-control" pattern="(?=^.{9,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Password should contain uppercase and lower case letters, one number or special character, and be at least 9 characters. " required>
         </div>
   
         <div class="form-group">
@@ -46,17 +46,15 @@
           <label for="egd">Est. Grad Date</label>
           <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required>
         </div>  
-        <button name="submit" id="submit" type="submit">Create</button>
+        <button name="submit" type="submit" id="submit">Create</button>
     
       <h4><a href="index.php">Back to Feed</a>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
-      
-      <script src="js/datepicker.js"></script>
-      <script src="js/validator.js"></script>
-      <script src="js/dominar-standalone.min.js"></script>
+     <script src="js/datepicker.js"></script>
+     <script src="js/validate.js"></script>
       
   </body>
 </html>
