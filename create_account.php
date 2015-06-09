@@ -51,8 +51,6 @@
           <input type="text" name="egd" id="egd" placeholder="Select a date" id="datepicker" class="form-control" required>
         </div>  
 
-        <button name="submit" type="submit" id="submit">Create</button>
-
         <button class='btn btn-default' name="submit" id="submit" type="submit">Create</button>
 
     

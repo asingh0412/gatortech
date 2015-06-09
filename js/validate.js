@@ -26,14 +26,43 @@ $(function() {
         var password = $('#password')[0];
         var program = $('#program')[0];
         var egd = $('#egd')[0];
+        
+        var nameVal = $('#name').val();
+        var emailVal = $('#email').val();
+        var passwordVal = $('#password').val();
+        var programVal = $('#program').val();
+        var egdVal = $('#egd').val();
+        
             
-        // Set custom error messages     
-        password.setCustomValidity("Password should contain uppercase and lower case letters, one number or special character, and be at least 9 characters.");
-        email.setCustomValidity("Please enter a valid email address.");
-        program.setCustomValidity("Please select a program option");
-        name.setCustomValidity("Please enter a name");
-        egd.setCustomValidity("Please select a graduation date");
-
+        // Set custom error messages
+        if (!nameVal) {
+             name.setCustomValidity("Name cannot be left blank");
+        }
+        else {
+            name.setCustomValidity("Please enter a valid name");
+        }
+        
+        if (!emailVal) {
+             email.setCustomValidity("Email cannot be left blank");
+        }
+        else {
+            email.setCustomValidity("Please enter a valid email address");
+        }
+        
+        if (!passwordVal) {
+             password.setCustomValidity("Password cannot be left blank");
+        }
+        else {
+            password.setCustomValidity("Password should contain upper and lower case letters, one number or special character, and be at least 9 characters");
+        }
+        
+        if (!programVal) {
+             name.setCustomValidity("Please select a program option");
+        }
+    
+        if (!egdVal) {
+             name.setCustomValidity("Please select a graduation date");
+        }
 
         // Remove any existing messages
         for ( var i = 0; i < errorMessages.length; i++ ) {
