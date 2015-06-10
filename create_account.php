@@ -61,7 +61,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
      <script src="js/datepicker.js"></script>
-     <script src="js/validate.js"></script>
+     <script src="js/validate_create.js"></script>
       
   </body>
 </html>

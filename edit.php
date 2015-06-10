@@ -28,6 +28,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/profile.css" rel="stylesheet">
+    <link href="css/edit.css" rel="stylesheet">
     
 </head>
 
@@ -42,7 +43,7 @@
         <form action="includes/edit_user.php" method="POST" class="form-group">
             
             <label>Student Name
-                <input type="text" name="name" placeholder="Full name" class="form-control" maxlength="64" autofocus value="<?php echo $name;?>">
+                <input type="text" name="name" id="name"placeholder="Full name" class="form-control" maxlength="64" pattern="[A-Za-z ]+" autofocus value="<?php echo $name;?>">
             </label>
             
             <!-- Just for ID sake-->
@@ -50,7 +51,7 @@
         
             <p>
             <label>Email
-                <input type="email" name="email" placeholder="Email address" class="form-control" maxlength="64" value="<?=$email?>" >
+                <input type="email" name="email" id="email"placeholder="Email address" class="form-control" maxlength="64" value="<?=$email?>" >
             </label>
             </p>
             
@@ -60,7 +61,7 @@
             ?>
             <p>
             <label>Program
-                <select name="program" class="form-control"  >
+                <select name="program" id="program" class="form-control"  >
                   <option <?php if($selected == 'Advisor'){echo('selected');}?>>Advisor</option>
                   <option <?php if($selected == 'Software Development'){echo('selected');}?>>Software Development</option>
                   <option <?php if($selected == 'Networking'){echo('selected');}?>>Networking</option>
@@ -70,7 +71,7 @@
             
             <p>
             <label>Est. Grad Date
-                <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" value="<?=$egd?>">
+                <input type="text" name="egd" id="egd" placeholder="Select a date" id="datepicker" class="form-control" value="<?=$egd?>">
             </label>
             </p>    
  
@@ -80,6 +81,8 @@
         </form>
     
     </div><!--Ending containter div-->
+    
+    <script src="js/validate_edit.js"></script>
 
     <script>
         // jQuery Datepicker  
