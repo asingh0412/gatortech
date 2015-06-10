@@ -33,6 +33,7 @@
 a:link, a:hover, a:visited, a:active {
     text-decoration: none;
     padding-left: 10px;
+    color: white;
 }
 
 #site-container {
