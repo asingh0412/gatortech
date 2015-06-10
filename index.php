@@ -26,7 +26,7 @@
                 echo "<a href='summary.php'>View Accounts</a>";
             }
             ?>
-            <a href='index.php' id="feed-link"> Feed </a>
+           
 			<a href='profile.php' id="signout-link"> Profile </a>
             <div id='profile-bubble'>
                 <?php
@@ -34,7 +34,7 @@
                 ?>
             </div>
             <a href='signout.php' id='nav-glyph' class='glyphicon glyphicon-log-out' title='Logout'></a>
-            <a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>
+            <!-- <a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a> -->
         </div>
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
                 <div class='post-container text-left'>
