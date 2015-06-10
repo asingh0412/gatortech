@@ -13,7 +13,6 @@
         <title>Tags</title>
         <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" media="all" href="css/index.css">
-        <link rel="stylesheet" type="text/css" media="all" href="css/tag_search.css">
         <!-- <script type="text/javascript" src="js/query.js"></script>
         <!-- <script type="text/javascript"  charset="utf-8" src="js/bootstrap.min.js"></script> -->
         <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
@@ -27,7 +26,6 @@
                 echo "<a href='summary.php'>View Accounts</a>";
             }
             ?>
-            <a href='index.php' id="feed-link"> Feed </a>
             <a href='profile.php' id="signout-link"> Profile </a>
             <div id='profile-bubble'>
                 <?php
@@ -35,12 +33,13 @@
                 ?>
             </div>
             <a href='signout.php' id='nav-glyph' class='glyphicon glyphicon-log-out' title='Logout'></a>
-            <!--<a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>-->
+            <a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>
         </div>
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
                 
-                <div id= 'hashtag-button-container'>
+                <div id= 'hashtag-button'>
                     
+
                     <a href='tag_search.php?id=general'>General</a>
                     <a href='tag_search.php?id=books'>Books</a>
                     <a href='tag_search.php?id=internships'>Internships</a>
@@ -72,7 +71,7 @@
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
                                 <hr class='hr-basic'>
-                                <div class='post-text'>".$row[user_post]."<a href='includes/tag_search.php'>#".$row[hashtag]."</a>"."
+                                <div class='post-text'>".$row[user_post]."<a href='tag_search.php?id=$row[hashtag]'>#".$row[hashtag]."</a>"."
                                 <input type='hidden' id='user_post' name='user_post'
                                     value='{$row[user_post]}'> 
                                 </div>
