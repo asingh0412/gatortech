@@ -39,7 +39,7 @@
 		?>
 	    </div>
 	    <a href='signout.php' id='nav-glyph' class='glyphicon glyphicon-log-out'></a>
-	    <a id='nav-glyph' class='glyphicon glyphicon-cog'></a>
+	    <!-- <a id='nav-glyph' class='glyphicon glyphicon-cog'></a> -->
         </div> <!-- Page Header -->
         <div class="container-fluid text-center" id="profile-content">
 	    <?php
@@ -50,7 +50,7 @@
 			    if ((!isset($_POST[user_email]))||($_POST[user_email]==$_SESSION['login_session']))
 			    {
 				echo 	"<figcaption>
-					    <a href='#' class='modal-link' data-toggle='modal' data-target='#upload-modal'>
+					    <a href='#' class='modal-link nav-link' data-toggle='modal' data-target='#upload-modal'>
 					    <span class='glyphicon glyphicon-camera upload-photo'></span></a>
 					</figcaption>";
 			    }

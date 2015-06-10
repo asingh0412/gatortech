@@ -2,3 +2,7 @@
     text-decoration: none;
     color: white;
 }
+
+#hashtag-button-container {
+    margin-top: 16px;
+}

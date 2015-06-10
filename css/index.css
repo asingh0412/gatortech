@@ -30,6 +30,10 @@
     }
 }
 
+.nav-link {
+    color: white;
+}
+
 a:link, a:hover, a:visited, a:active {
     text-decoration: none;
     padding-left: 10px;
@@ -111,11 +115,11 @@ a:link, a:hover, a:visited, a:active {
 
 #signout-link {
     margin-right: 16px;
-    color: #006D58;
+    color: white;
 }
 
 #create-link, #summary-link {
-    color: #006D58;
+    color: white;
 }
 
 .post-field {
@@ -244,3 +248,4 @@ t:focus {
     background-color: #E67E22;
     border-color: #E67E22;
 }
+

@@ -22,12 +22,13 @@
         <div id="site-container">
             <?php echo "<div class='container-fluid $nav_color' id='nav'>"; 
             if ($nav_color == 'Admin') {
-                echo "<a href='create_account.php' id='create-link'>Create Account</a>";
-                echo "<a href='summary.php' id='summary-link'>View Accounts</a>";
+                echo "<a href='create_account.php' class='nav-link' id='create-link'>Create Account</a>";
+                echo "<a href='summary.php' class='nav-link' id='summary-link'>View Accounts</a>";
             }
             ?>
            
-			<a href='profile.php' id="signout-link"> Profile </a>
+	    <a href='profile.php' class="nav-link" id="signout-link"> Profile </a>
+            <!--<a href='tag_search.php' class='nav-link'> Tag Search </a>--> 
             <div id='profile-bubble'>
                 <?php
                     echo "<a href='profile.php'><img src=$nav_picture id='profile-picture-sm'></a>";

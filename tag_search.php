@@ -35,13 +35,12 @@
                 ?>
             </div>
             <a href='signout.php' id='nav-glyph' class='glyphicon glyphicon-log-out' title='Logout'></a>
-            <a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>
+            <!--<a id='nav-glyph' class='glyphicon glyphicon-cog' title='Settings'></a>-->
         </div>
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
                 
-                <div id= 'hashtag-button'>
+                <div id= 'hashtag-button-container'>
                     
-
                     <a href='tag_search.php?id=general'>General</a>
                     <a href='tag_search.php?id=books'>Books</a>
                     <a href='tag_search.php?id=internships'>Internships</a>
@@ -73,7 +72,7 @@
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
                                 <hr class='hr-basic'>
-                                <div class='post-text'>".$row[user_post]."<a href='tag_search.php'>#".$row[hashtag]."</a>"."
+                                <div class='post-text'>".$row[user_post]."<a href='includes/tag_search.php'>#".$row[hashtag]."</a>"."
                                 <input type='hidden' id='user_post' name='user_post'
                                     value='{$row[user_post]}'> 
                                 </div>
