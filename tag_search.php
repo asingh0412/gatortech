@@ -13,6 +13,7 @@
         <title>Tags</title>
         <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" media="all" href="css/index.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/tag_search.css">
         <!-- <script type="text/javascript" src="js/query.js"></script>
         <!-- <script type="text/javascript"  charset="utf-8" src="js/bootstrap.min.js"></script> -->
         <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
@@ -26,6 +27,7 @@
                 echo "<a href='summary.php'>View Accounts</a>";
             }
             ?>
+            <a href='index.php' id="feed-link"> Feed </a>
             <a href='profile.php' id="signout-link"> Profile </a>
             <div id='profile-bubble'>
                 <?php

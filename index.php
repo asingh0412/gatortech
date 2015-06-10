@@ -26,7 +26,8 @@
                 echo "<a href='summary.php'>View Accounts</a>";
             }
             ?>
-            <a href='profile.php' id="signout-link"> Profile </a>
+            <a href='index.php' id="feed-link"> Feed </a>
+			<a href='profile.php' id="signout-link"> Profile </a>
             <div id='profile-bubble'>
                 <?php
                     echo "<a href='profile.php'><img src=$nav_picture id='profile-picture-sm'></a>";
