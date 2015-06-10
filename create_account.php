@@ -34,7 +34,7 @@
         
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="Password" class="form-control" pattern="(?=^.{9,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Password should contain uppercase and lower case letters, one number or special character, and be at least 9 characters. " required>
+          <input type="password" name="password" id="password" placeholder="Password" class="form-control" pattern="(?=^.{9,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
         </div>
   
         <div class="form-group">
