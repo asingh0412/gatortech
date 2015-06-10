@@ -1,7 +1,7 @@
 <?php
     include('includes/session.php');
     require "includes/db.php";
-    require "includes/load_feed.php";
+    require "includes/load_tag.php";
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
         <!-- Responsive design -->
         <meta name="viewport" content="width=device-width, initial-scale=1 , maximum-scale=1">
         <meta charset="utf-8">
-        <title>Feed</title>
+        <title>Tags</title>
         <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" media="all" href="css/index.css">
         <!-- <script type="text/javascript" src="js/query.js"></script>
@@ -37,6 +37,17 @@
         </div>
             <div id="page-content" class="container-fluid text-center"> <!-- start wrapper -->
                 
+                <div id= 'hashtag-button'>
+                    
+
+                    <a href='tag_search.php?id=general'>General</a>
+                    <a href='tag_search.php?id=books'>Books</a>
+                    <a href='tag_search.php?id=internships'>Internships</a>
+                    <a href='tag_search.php?id=events'>Events</a>
+                    <a href='tag_search.php?id=jobs'>Jobs</a>
+                    <a href='tag_search.php?id=scholarships'>Scholarships</a>
+                    
+                </div>
                 <div id = 'feed-container'>
                     <?php foreach($result as $row) {
                     echo "<div class='post-container text-left'>
