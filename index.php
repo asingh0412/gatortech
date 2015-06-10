@@ -68,8 +68,9 @@
                     </div>
                 </div>
                 <div id = 'feed-container'>
-                    <?php foreach($result as $row) {
-                    echo "<div class='post-container text-left'>
+                    <?php
+                    foreach($result as $row) {
+                    $text = "<div class='post-container text-left'>
                             <div class='user-img-container ".$row[user_status]."'>
                                 <img src=".$row[picture]."
                                 class='user-img'
@@ -82,9 +83,9 @@
                                 </form>
                                 <div class='delete-post-container'>";
                                 if($_SESSION['login_session'] == $row[user_email]) {
-                                    echo "<a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>"; 
+                                    $text = $text . "<a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>"; 
                                 }
-                                echo "</div><br>
+                                $text = $text . "</div><br>
                                 <div class='post-date'>
                                     ".substr($row[post_date], 10, 6)." 
                                     ".substr($row[post_date], 0, 11)."
@@ -96,6 +97,8 @@
                                 </div>
                             </div>
                         </div>";
+                        $text = textToLink($text);
+                        echo $text;
                     }
                 ?>       
                 </div>

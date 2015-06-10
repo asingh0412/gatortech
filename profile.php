@@ -64,7 +64,7 @@
 	    <div id = 'feed-container'>
 	    <!--<h3>News Feed</h3>-->
 	    <?php foreach($result2 as $row) {
-                    echo "<div class='post-container text-left'>
+                    $text = "<div class='post-container text-left'>
                             <div class='user-img-container ".$row[user_status]."'>
                                 <img src=".$row[picture]."
                                 class='user-img'
@@ -76,23 +76,23 @@
                                     <button class='btn btn-primary profile-feed-btn ".$row[user_status]."'>".$row[user_name]."</button>
                                 </form>
                                 <div class='delete-post-container'>";
-                                
                                 if($_SESSION['login_session'] == $row[user_email]) {
-                                    echo "<a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>"; 
+                                    $text = $text . "<a href='includes/delete.php?id=$row[ID]'><span class='glyphicon glyphicon-remove side-bar-delete'></span></a>"; 
                                 }
-                                
-                                echo "</div><br>
+                                $text = $text . "</div><br>
                                 <div class='post-date'>
                                     ".substr($row[post_date], 10, 6)." 
                                     ".substr($row[post_date], 0, 11)."
                                 </div>
                                 <hr class='hr-basic'>
-                                <div class='post-text'>".$row[user_post]."<a href='tag_search.php'>  #".$row[hashtag]."</a>"."
+                                <div class='post-text'>".$row[user_post]."<a href='tag_search.php?id=$row[hashtag]'> #".$row[hashtag]."</a>"."
                                 <input type='hidden' id='user_post' name='user_post'
-                                    value=".$row[user_post]."> 
+                                    value='{$row[user_post]}'> 
                                 </div>
                             </div>
                         </div>";
+						$text = textToLink($text);
+                        echo $text;
                     }
                 ?>
 	    </div>
