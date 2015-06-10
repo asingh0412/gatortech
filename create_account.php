@@ -24,22 +24,22 @@
     <form action="create_account.php" name="create_form" method="POST" class="form-group" autocomplete="false" novalidate>
         <div class="form-group">
           <label for="name">Student Name</label>
-          <input type="text" name="name" id="name" placeholder="Full name" class="form-control" pattern="[A-Za-z ]+" autofocus required>
+          <input type="text" name="name" placeholder="Full name" class="form-control" pattern="[A-Za-z ]+" autofocus required>
         </div>
         
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="Email address" class="form-control" required>
+          <input type="email" name="email" placeholder="Email address" class="form-control" required>
         </div>
         
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="Password" class="form-control" pattern="(?=^.{9,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+          <input type="password" name="password" id="password" placeholder="Password" class="form-control" pattern="(?=^.{9,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Password should contain uppercase and lower case letters, one number or special character, and be at least 9 characters. " required>
         </div>
   
         <div class="form-group">
           <label for="program">Program</label>
-          <select name="program" id="program" class="form-control" required>
+          <select name="program" class="form-control" required>
             <option value="">Please select a degree</option>
             <option value="Software Development">Software Development</option>
             <option value="Networking">Networking</option>
@@ -48,7 +48,7 @@
         
         <div class="form-group">
           <label for="egd">Est. Grad Date</label>
-          <input type="text" name="egd" id="egd" placeholder="Select a date" id="datepicker" class="form-control" required>
+          <input type="text" name="egd" placeholder="Select a date" id="datepicker" class="form-control" required>
         </div>  
 
         <button class='btn btn-default' name="submit" id="submit" type="submit">Create</button>
@@ -61,7 +61,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
      <script src="js/datepicker.js"></script>
-     <script src="js/validate_create.js"></script>
+     <script src="js/validate.js"></script>
       
   </body>
 </html>
