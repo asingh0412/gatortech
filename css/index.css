@@ -33,7 +33,7 @@
 a:link, a:hover, a:visited, a:active {
     text-decoration: none;
     padding-left: 10px;
-    color: white;
+    color: #FF7A23;
 }
 
 #site-container {
@@ -111,7 +111,11 @@ a:link, a:hover, a:visited, a:active {
 
 #signout-link {
     margin-right: 16px;
-    color: white;
+    color: #006D58;
+}
+
+#create-link, #summary-link {
+    color: #006D58;
 }
 
 .post-field {

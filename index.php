@@ -22,8 +22,8 @@
         <div id="site-container">
             <?php echo "<div class='container-fluid $nav_color' id='nav'>"; 
             if ($nav_color == 'Admin') {
-                echo "<a href='create_account.php'>Create Account</a>";
-                echo "<a href='summary.php'>View Accounts</a>";
+                echo "<a href='create_account.php' id='create-link'>Create Account</a>";
+                echo "<a href='summary.php' id='summary-link'>View Accounts</a>";
             }
             ?>
            
